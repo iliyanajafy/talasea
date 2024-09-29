@@ -1,0 +1,46 @@
+{% load static %}
+<nav class="nav">
+  <div class="nav-bar">
+    <div class="nav-right">
+      <a href="#">
+        <img src="{% static "img/logo.svg" %}" alt="logo talasea" class="logo"
+        />
+      </a>
+      <a href="#">
+        <img src="{% static "img/logo-sm.svg" %}" alt="logo talasea"
+        class="logo-sm" />
+      </a>
+      <div class="nav-navitem">
+        <a href="about-us.html" class="nav-item">
+          <span>درباره طلاسی</span>
+        </a>
+        <a href="rules.html" class="nav-item">
+          <span>قوانین و مقررات</span>
+        </a>
+        <a href="question.html" class="nav-item">
+          <span>سوالات متداول</span>
+        </a>
+        <a href="" class="nav-item">
+          <span>بلاگ طلاسی</span>
+        </a>
+      </div>
+    </div>
+    <div class="nav-left">
+      <img src="{% static "img/Screenshot 2024-08-19 110423.png" %}" alt=""
+      class="darkmode" />
+      <div class="nav-divider"></div>
+      <a href="login.html" class="login">
+        <button class="btn btn-nav">
+          <img src="{% static "img/login.svg" %}" alt="" class="img-login" />
+          <span class="login-span">ورود</span>
+        </button>
+      </a>
+      <a href="login.html">
+        <button class="btn btn-nav btn-nav-reg">
+          <img src="{% static "img/signUp.svg" %}" alt="" class="img-login" />
+          <span class="login-span">ثبت نام</span>
+        </button>
+      </a>
+    </div>
+  </div>
+</nav>
