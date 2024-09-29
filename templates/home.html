@@ -1,5 +1,6 @@
 {% extends "base.html" %}
 {% block content %}
+{% load static %}
 <header class="header">
             <div class="main_notificationContainer">
                 <div class="main_rightContent">
@@ -41,12 +42,12 @@
                         <div class="insidethebanner">
                             <div class="banner-img">
                             <img
-                                src="media/img/headerImg2.webp"
+                                src="{% static "img/headerImg2.webp" %}"
                                 alt=""
                                 class="img-banner-laptop"
                             />
                             <img
-                                src="media/img/headerImgSmall2.webp"
+                                src="{% static "img/headerImgSmall2.webp" %}"
                                 alt=""
                                 class="img-banner-laptop-sm"
                             />
@@ -70,12 +71,12 @@
                         <div class="insidethebanner">
                             <div class="banner-img">
                             <img
-                                src="media/img/headerImg1.webp"
+                                src="{% static "img/headerImg1.webp" %}"
                                 alt=""
                                 class="img-banner-phone"
                             />
                             <img
-                                src="media/img/download.webp"
+                                src="{% static "img/download.webp" %}"
                                 alt=""
                                 class="img-banner-phone-sm"
                             />
@@ -151,7 +152,7 @@
             </div>
             <div class="buy-left col-md-12 col-lg-6">
               <div class="video">
-                <img src="media/img/Untitled.png" alt="" class="video img-fluid">
+                <img src="{% static "img/Untitled.png" %}" alt="" class="video img-fluid">
               </div>
             </div>
         </div>
@@ -162,7 +163,7 @@
             <div class="col-lg-6 col-12">
                 <div class="main_itemContent3 question-contain">
                     <div class="main_mainImg">
-                        <img alt="خرید و فروش طلا با هر میزان مبلغ" loading="lazy" width="64" height="86" decoding="async" data-nimg="1" class="main_light__5d0Hb" style="color:transparent" src="/media/img/question1.webp">
+                        <img alt="خرید و فروش طلا با هر میزان مبلغ" loading="lazy" width="64" height="86" decoding="async" data-nimg="1" class="main_light__5d0Hb" style="color:transparent" src="{% static "img/question1.webp" %}">
                     </div>
                     <div class="main_textsContainer">
                         <h2 class="main_subject">خرید و فروش آنلاین طلا با هر میزان مبلغ</h2>
@@ -173,7 +174,7 @@
             <div class="col-lg-6 col-12 ">
                 <div class="main_itemContent3 question-contain">
                     <div class="main_mainImg">
-                        <img alt="خرید و فروش طلا با هر میزان مبلغ" loading="lazy" width="64" height="86" decoding="async" data-nimg="1" class="main_light__5d0Hb" style="color:transparent" src="/media/img/question2.webp">
+                        <img alt="خرید و فروش طلا با هر میزان مبلغ" loading="lazy" width="64" height="86" decoding="async" data-nimg="1" class="main_light__5d0Hb" style="color:transparent" src="{% static "img/question2.webp" %}">
                     </div>
                     <div class="main_textsContainer">
                         <h2 class="main_subject">پس انداز طلا</h2>
@@ -184,7 +185,7 @@
             <div class="col-lg-6 col-12">
                 <div class="main_itemContent3 question-contain">
                     <div class="main_mainImg">
-                        <img alt="خرید و فروش طلا با هر میزان مبلغ" loading="lazy" width="64" height="86" decoding="async" data-nimg="1" class="main_light__5d0Hb" style="color:transparent" src="/media/img/question3.webp">
+                        <img alt="خرید و فروش طلا با هر میزان مبلغ" loading="lazy" width="64" height="86" decoding="async" data-nimg="1" class="main_light__5d0Hb" style="color:transparent" src="{% static "img/question3.webp" %}">
                     </div>
                     <div class="main_textsContainer">
                         <h2 class="main_subject">امنیت سپرده‌ گذاری طلا</h2>
@@ -195,7 +196,7 @@
             <div class="col-lg-6 col-12 ">
                 <div class="main_itemContent3 question-contain">
                     <div class="main_mainImg">
-                        <img alt="خرید و فروش طلا با هر میزان مبلغ" loading="lazy" width="64" height="86" decoding="async" data-nimg="1" class="main_light__5d0Hb" style="color:transparent" src="/media/img/question4.webp">
+                        <img alt="خرید و فروش طلا با هر میزان مبلغ" loading="lazy" width="64" height="86" decoding="async" data-nimg="1" class="main_light__5d0Hb" style="color:transparent" src="{% static "img/question4.webp" %}">
                     </div>
                     <div class="main_textsContainer">
                         <h2 class="main_subject">خرید آنلاین طلا بدون اجرت</h2>
@@ -206,7 +207,7 @@
             <div class="col-lg-6 col-12">
                 <div class="main_itemContent3 pt-3 question-contain2">
                     <div class="main_mainImg">
-                        <img alt="خرید و فروش طلا با هر میزان مبلغ" loading="lazy" width="64" height="86" decoding="async" data-nimg="1" class="main_light__5d0Hb" style="color:transparent" src="/media/img/question5.webp">
+                        <img alt="خرید و فروش طلا با هر میزان مبلغ" loading="lazy" width="64" height="86" decoding="async" data-nimg="1" class="main_light__5d0Hb" style="color:transparent" src="{% static "img/question5.webp" %}">
                     </div>
                     <div class="main_textsContainer">
                         <h2 class="main_subject">کارت هدیه لوکس طلا</h2>
@@ -217,7 +218,7 @@
             <div class="col-lg-6 col-12">
                 <div class="main_itemContent3 pt-3">
                     <div class="main_mainImg">
-                        <img alt="خرید و فروش طلا با هر میزان مبلغ" loading="lazy" width="64" height="86" decoding="async" data-nimg="1" class="main_light__5d0Hb" style="color:transparent" src="/media/img/question6.webp">
+                        <img alt="خرید و فروش طلا با هر میزان مبلغ" loading="lazy" width="64" height="86" decoding="async" data-nimg="1" class="main_light__5d0Hb" style="color:transparent" src="{% static "img/question6.webp" %}">
                     </div>
                     <div class="main_textsContainer">
                         <h2 class="main_subject">تحویل فیزیکی طلا</h2>
@@ -233,7 +234,7 @@
             <div class="posi-body row">
                 <div class="col-lg-3 col-sm-6 col-12 posi-box">
                     <div class="posi-box-img">
-                        <img src="media/img/possibility1.svg" alt="">
+                        <img src="{% static "img/possibility1.svg" %}" alt="">
                     </div>
                     <div class="posi-box-title">
                         <h2>خرید آنلاین طلای آب شده</h2>
@@ -249,7 +250,7 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 col-12 posi-box">
                     <div class="posi-box-img">
-                        <img src="media/img/possibility2.svg" alt="">
+                        <img src="{% static "img/possibility2.svg" %}" alt="">
                     </div>
                     <div class="posi-box-title">
                         <h2>تحویل فیزیکی طلا</h2>
@@ -265,7 +266,7 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 col-12 posi-box">
                     <div class="posi-box-img">
-                        <img src="media/img/possibility3.svg" alt="">
+                        <img src="{% static "img/possibility3.svg" %}" alt="">
                     </div>
                     <div class="posi-box-title">
                         <h2>کارت هدیه طلا</h2>
@@ -281,7 +282,7 @@
                 </div>
                 <div class="col-lg-3 col-sm-6 col-12 posi-box">
                     <div class="posi-box-img">
-                        <img src="media/img/possibility4.svg" alt="">
+                        <img src="{% static "img/possibility4.svg" %}" alt="">
                     </div>
                     <div class="posi-box-title">
                         <h2>پشتیبانی 24 ساعته</h2>
@@ -302,11 +303,11 @@
         <div class="midbanner-back">
             <div class="midbanner-container row">
                 <div class="midbanner-img col-12 col-sm-6">
-                    <img src="media/img/middleBanner.webp" alt="">
+                    <img src="{% static "img/middleBanner.webp" %}" alt="">
                 </div>
                 <div class="midbanner-char col-12 col-sm-6">
                     <h2 class="mid-banner-h2">امن ترین جا برای پس انداز طلا</h2>
-                    <button class="mid-banner-btn btn"><span>ثبت نام در طلاسی</span><img src="media/img/arrow-left.svg" alt=""></button>
+                    <button class="mid-banner-btn btn"><span>ثبت نام در طلاسی</span><img src="{% static "img/arrow-left.svg" %}" alt=""></button>
                 </div>
             </div>
         </div>
@@ -325,12 +326,12 @@
                 </div>
             </div>
             <div class="mid-market-img-sm">
-                <img src="media/img/nemoodar.png" alt="" class="img-fluid">
+                <img src="{% static "img/nemoodar.png" %}" alt="" class="img-fluid">
             </div>
             <div class="main_bottom">
                 <div class="main_bottomButton">
                     <button class="gold-button main_sectionButton btn">
-                        <img alt="تحلیل بازار طلا" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" style="color:transparent" src="media/img/chart.svg">
+                        <img alt="تحلیل بازار طلا" loading="lazy" width="24" height="24" decoding="async" data-nimg="1" style="color:transparent" src="{% static "img/chart.svg" %}">
                         <span>همین الان شروع کن!</span>
                     </button>
                 </div>
@@ -345,7 +346,7 @@
                         <span class="user-chart_timeText">یک ماه</span>
                     </div>
                     <div class="main-market-img">
-                        <img src="media/img/nemoodar.png" alt="" class="nemoodar img-fluid">
+                        <img src="{% static "img/nemoodar.png" %}" alt="" class="nemoodar img-fluid">
                     </div>
                 </div>
             </div>
@@ -457,7 +458,7 @@
             <div class="giftcard-right">
                 <h3 class="page-title main_sectionTitle">کارت هدیه طلا</h3>
                 <div class="main_itemContent-sm">
-                    <img alt="کارت هدیه طلا" loading="lazy" width="401" height="281" decoding="async" data-nimg="1" style="color:transparent"  src="media/img/giftCard.webp">
+                    <img alt="کارت هدیه طلا" loading="lazy" width="401" height="281" decoding="async" data-nimg="1" style="color:transparent"  src="{% static "img/giftCard.webp" %}">
                     <span>کارت هدیه طلاسی</span>
                 </div>
                 <span class="main_sectionDescription yahoo">با کارت‌های هدیه لوکس زیبا و ارزشمند طلاسی می‌توانید بهترین هدیه‌ها را به عزیزان خود بدهید. کارت‌های هدیه طلای طلاسی در هر وزن و رنگی به دلخواه شما قابل ارایه خواهد بود.</span>
@@ -467,7 +468,7 @@
             </div>
             <div class="giftcard-left">
                 <div class="main_itemContent">
-                    <img alt="کارت هدیه طلا" loading="lazy" width="401" height="281" decoding="async" data-nimg="1" style="color:transparent" src="media/img/giftCard.webp">
+                    <img alt="کارت هدیه طلا" loading="lazy" width="401" height="281" decoding="async" data-nimg="1" style="color:transparent" src="{% static "img/giftCard.webp" %}">
                     <span>کارت هدیه طلاسی</span>
                 </div>
             </div>
@@ -479,18 +480,18 @@
             <div class="main_inviteRight">
                 <h4 class="page-title main_sectionTitle">دعوت از دوستان</h4>
                 <div class="main_inviteLeft main_smallPicture">
-                    <img alt="دعوت از دوستان" loading="lazy" width="403" height="377" decoding="async" data-nimg="1" style="color:transparent" src="media/img/invite.webp">
+                    <img alt="دعوت از دوستان" loading="lazy" width="403" height="377" decoding="async" data-nimg="1" style="color:transparent" src="{% static "img/invite.webp" %}">
                 </div>
                 <span class="main_sectionDescription yahoo">با معرفی طلاسی به دوستان خود و احراز هویت آنان در پلتفرم ما، بخشی از کارمزد معاملات آن‌ها به شما تعلق گرفته و به راحتی می‌توانید کسب درآمد کنید.</span>
                 <div class="main_bottomButton">
                     <button class="gold-button main_sectionButton btn">
-                        <img alt="دعوت از دوستان به طلاسی" loading="lazy" width="30" height="30" decoding="async" data-nimg="1" style="color:transparent" src="media/img/userPlus.svg">
+                        <img alt="دعوت از دوستان به طلاسی" loading="lazy" width="30" height="30" decoding="async" data-nimg="1" style="color:transparent" src="{% static "img/userPlus.svg" %}">
                         <span>دعوت از دوستان</span>
                     </button>
                 </div>
             </div>
             <div class="main_inviteLeft main_bigPicture">
-                <img alt="دعوت از دوستان" loading="lazy" width="403" height="377" decoding="async" data-nimg="1" style="color:transparent" src="media/img/invite.webp">
+                <img alt="دعوت از دوستان" loading="lazy" width="403" height="377" decoding="async" data-nimg="1" style="color:transparent" src="{% static "img/invite.webp" %}">
                 <svg width="606" height="344" viewBox="0 0 606 344" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path opacity="0.25" d="M25.3848 344C-23.8617 273.799 4.2449 203.214 60.9813 163.151C118.662 122.424 53.5448 38.1841 168.352 3.9004C227.742 -13.833 279.97 34.5331 338.183 36.6277C390.345 38.5089 444.306 -4.14325 497.277 15.6143C532.694 26.9889 568.1 58.9089 565.458 97.069C564.094 116.79 552.013 140.136 564.523 155.12C617.312 218.351 611.874 273.665 591.184 343.096L25.3848 344Z" fill="currentColor">
 
@@ -532,7 +533,7 @@
                 </div>
             </div>
             <div class="investment-left">
-                <img alt="مقایسه سود سرمایه گذاری طلا" loading="lazy" width="468" height="425" decoding="async" data-nimg="1" style="color:transparent" src="/media/img/investmentChart.webp">
+                <img alt="مقایسه سود سرمایه گذاری طلا" loading="lazy" width="468" height="425" decoding="async" data-nimg="1" style="color:transparent" src="{% static "img/investmentChart.webp" %}">
             </div>
         </div>
     </section>
@@ -598,8 +599,8 @@
                 </div>
             </div>
         </div>
-        <img alt="ثبت نام در طلاسی" loading="lazy" width="76" height="85" decoding="async" data-nimg="1" class="main_topLeft__hhgzO" style="color:transparent" src="media/img/registerGold.webp">
-        <img alt="ثبت نام در طلاسی" loading="lazy" width="48" height="52" decoding="async" data-nimg="1" class="main_bottomRight__ON8ek" style="color:transparent" src="media/img/registerGold.webp">
+        <img alt="ثبت نام در طلاسی" loading="lazy" width="76" height="85" decoding="async" data-nimg="1" class="main_topLeft__hhgzO" style="color:transparent" src="{% static "img/registerGold.webp" %}">
+        <img alt="ثبت نام در طلاسی" loading="lazy" width="48" height="52" decoding="async" data-nimg="1" class="main_bottomRight__ON8ek" style="color:transparent" src="{% static "img/registerGold.webp" %}">
     </div>
     </section>
     <section class="main-news">
