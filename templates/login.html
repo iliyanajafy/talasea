@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ورود به پلتفرم طلاسی - خرید و فروش آنلاین طلا | طلاسی</title>
-    <link rel="stylesheet" href="media/css/bootstrap.css" />
-    <link rel="stylesheet" href="media/css/login.css" />
-  </head>
-  <body>
+{% extends "base_login.html" %}
+{% load static %}
+{% block content %}
     <div class="main container-fluid">
       <div class="rightpage">
         <div class="inforight">
@@ -15,7 +8,7 @@
         </div>
         <div class="form">
           <a href="#">
-            <img src="media/img/logo.svg" alt="talasealogo" class="logo" />
+            <img src="{% static "img/logo.svg" %}" alt="talasealogo" class="logo" />
           </a>
           <div class="input-form">
             <span class="span-850">ورود به پروفایل کاربری</span>
@@ -38,7 +31,7 @@
       </div>
       <div class="leftpage">
         <div class="img-container">
-          <img src="media/img/Untitled-1.png" alt="" class="img-talasea" />
+          <img src="{% static "img/Untitled-1.png" %}" alt="" class="img-talasea" />
         </div>
         <div class="content-login">
           <h1 class="account_subject">
@@ -53,6 +46,7 @@
         </div>
       </div>
     </div>
+{% endblock content %}
     <div class="widget-icon">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
         <path
@@ -63,8 +57,6 @@
       </svg>
     </div>
     <div class="bell-container">
-      <img src="media/img/bell.svg" alt="" class="bell" />
+      <img src="{% static "img/bell.svg" %}" alt="" class="bell" />
     </div>
-    <script src="media/js/bootstrap.js"></script>
-  </body>
-</html>
+    <script src="{% static "js/bootstrap.js" %}"></script>
