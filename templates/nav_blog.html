@@ -2,11 +2,11 @@
 <nav class="nav">
   <div class="nav-bar">
     <div class="nav-right">
-      <a href="#">
+      <a href="{% url "home" %}">
         <img src="{% static "img/logo.svg" %}" alt="logo talasea" class="logo"
         />
       </a>
-      <a href="#">
+      <a href="{% url "home" %}">
         <img src="{% static "img/logo-sm.svg" %}" alt="logo talasea"
         class="logo-sm" />
       </a>
@@ -29,13 +29,13 @@
       <img src="{% static "img/Screenshot 2024-08-19 110423.png" %}" alt=""
       class="darkmode" />
       <div class="nav-divider"></div>
-      <a href="login.html" class="login">
+      <a href="{% url "login" %}" class="login">
         <button class="btn btn-nav">
           <img src="{% static "img/login.svg" %}" alt="" class="img-login" />
           <span class="login-span">ورود</span>
         </button>
       </a>
-      <a href="login.html">
+      <a href="{% url "login" %}">
         <button class="btn btn-nav btn-nav-reg">
           <img src="{% static "img/signUp.svg" %}" alt="" class="img-login" />
           <span class="login-span">ثبت نام</span>
