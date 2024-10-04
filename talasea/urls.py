@@ -22,4 +22,8 @@ urlpatterns = [
     path('',include("blog.urls")),
     path('',include("register.urls")),
     path('',include("home.urls")),
+    path('',include("questions.urls")),
+    path('',include("aboutus.urls")),
+    path('',include("rules.urls")),
+    
 ]
