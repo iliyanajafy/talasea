@@ -1,18 +1,19 @@
 {% extends "base_blog.html" %} {% block content %}
+{% load static %}
 <section class="wp-page-container">
   <div class="wp-page-content">
     <div class="main-mainarticle">
       <div class="main_rightArticle">
         <article class="main_rightArticleContent">
           <img
-            alt="ارزش طلا در کشورهای مختلف جهان چگونه است؟"
+            alt="{{bigone.title}}"
             loading="lazy"
             width="760"
             height="487"
             decoding="async"
             data-nimg="1"
             class="main_backImg"
-            src="media/img/wtf.webp"
+            src="{{bigone.blog_image.url}}"
             style="color: transparent"
           />
           <div class="main_backLinear"></div>
@@ -23,17 +24,18 @@
               </div></a
             >
             <h1 class="main-wp-title">
-              <a
-                href="/mag/facts/the-value-of-gold-in-different-countries-of-the-world"
-                class="underline-hover-effect"
-                >ارزش طلا در کشورهای مختلف جهان چگونه است؟</a
-              >
+
+                <a
+                  href="{% url "blog" bigone.blogid %}"
+                  class="underline-hover-effect"
+                  >{{bigone.title}}</a
+                >
             </h1>
             <ul class="moreItem_moreData moreItem_onBanner">
               <div class="moreItem_moreDataContent">
                 <a class="moreItem_moreDataItem" href="/mag/@ida"
                   ><span>توسط</span
-                  ><span class="moreItem_author">آیدا حسینی</span></a
+                  ><span class="moreItem_author">{{bigone.author.name}}</span></a
                 >
               </div>
               <div class="moreItem_moreDataContent">
@@ -45,9 +47,9 @@
                     height="11"
                     decoding="async"
                     data-nimg="1"
-                    src="media/img/calender.svg"
+                    src="{% static "img/calender.svg" %}"
                     style="color: transparent"
-                  /><span>۱۰ شهریور ۱۴۰۳</span>
+                  /><span>{{context.day}} {{context.month}} {{context.year}}</span>
                 </li>
               </div>
               <div class="moreItem_moreDataContent">
@@ -59,9 +61,9 @@
                     height="11"
                     decoding="async"
                     data-nimg="1"
-                    src="media/img/calender.svg"
+                    src="{% static "img/calender.svg" %}"
                     style="color: transparent"
-                  /><span>678 بازدید</span>
+                  /><span>{{bigone.view_count}} بازدید</span>
                 </li>
               </div>
             </ul>
@@ -113,7 +115,7 @@
                     height="11"
                     decoding="async"
                     data-nimg="1"
-                    src="media/img/calender.svg"
+                    src="{% static "img/calender.svg" %}"
                     style="color: transparent"
                   /><span>۱۰ شهریور ۱۴۰۳</span>
                 </li>
@@ -167,7 +169,7 @@
                     height="11"
                     decoding="async"
                     data-nimg="1"
-                    src="media/img/calender.svg"
+                    src="{% static "img/calender.svg" %}"
                     style="color: transparent"
                   /><span>۱۱ شهریور ۱۴۰۳</span>
                 </li>
@@ -221,7 +223,7 @@
                     height="11"
                     decoding="async"
                     data-nimg="1"
-                    src="media/img/calender.svg"
+                    src="{% static "img/calender.svg" %}"
                     style="color: transparent"
                   /><span>۱۰ شهریور ۱۴۰۳</span>
                 </li>
@@ -285,7 +287,7 @@
                     height="11"
                     decoding="async"
                     data-nimg="1"
-                    src="media/img/calender.svg"
+                    src="{% static "img/calender.svg" %}"
                     style="color: transparent"
                   /><span>۲۲ مرداد ۱۴۰۳</span>
                 </li>
@@ -335,7 +337,7 @@
                     height="11"
                     decoding="async"
                     data-nimg="1"
-                    src="media/img/calender.svg"
+                    src="{% static "img/calender.svg" %}"
                     style="color: transparent"
                   /><span>۲۳ مرداد ۱۴۰۳</span>
                 </li>
@@ -384,7 +386,7 @@
                     height="11"
                     decoding="async"
                     data-nimg="1"
-                    src="media/img/calender.svg"
+                    src="{% static "img/calender.svg" %}"
                     style="color: transparent"
                   /><span>۳۱ مرداد ۱۴۰۳</span>
                 </li>
@@ -435,7 +437,7 @@
                     height="11"
                     decoding="async"
                     data-nimg="1"
-                    src="media/img/calender.svg"
+                    src="{% static "img/calender.svg" %}"
                     style="color: transparent"
                   /><span>۲۲ مرداد ۱۴۰۳</span>
                 </li>
@@ -485,7 +487,7 @@
                     height="11"
                     decoding="async"
                     data-nimg="1"
-                    src="media/img/calender.svg"
+                    src="{% static "img/calender.svg" %}"
                     style="color: transparent"
                   /><span>۲۴ مرداد ۱۴۰۳</span>
                 </li>
@@ -556,7 +558,7 @@
                           height="11"
                           decoding="async"
                           data-nimg="1"
-                          src="media/img/calender.svg"
+                          src="{% static "img/calender.svg" %}"
                           style="color: transparent"
                         /><span>۲۱ شهریور ۱۴۰۳</span>
                       </li>
@@ -610,7 +612,7 @@
                           height="11"
                           decoding="async"
                           data-nimg="1"
-                          src="media/img/calender.svg"
+                          src="{% static "img/calender.svg" %}"
                           style="color: transparent"
                         /><span>۲۱ شهریور ۱۴۰۳</span>
                       </li>
@@ -664,7 +666,7 @@
                           height="11"
                           decoding="async"
                           data-nimg="1"
-                          src="media/img/calender.svg"
+                          src="{% static "img/calender.svg" %}"
                           style="color: transparent"
                         /><span>۲۱ شهریور ۱۴۰۳</span>
                       </li>
@@ -718,7 +720,7 @@
                           height="11"
                           decoding="async"
                           data-nimg="1"
-                          src="media/img/calender.svg"
+                          src="{% static "img/calender.svg" %}"
                           style="color: transparent"
                         /><span>۲۱ شهریور ۱۴۰۳</span>
                       </li>
@@ -772,7 +774,7 @@
                           height="11"
                           decoding="async"
                           data-nimg="1"
-                          src="media/img/calender.svg"
+                          src="{% static "img/calender.svg" %}"
                           style="color: transparent"
                         /><span>۲۱ شهریور ۱۴۰۳</span>
                       </li>
@@ -826,7 +828,7 @@
                           height="11"
                           decoding="async"
                           data-nimg="1"
-                          src="media/img/calender.svg"
+                          src="{% static "img/calender.svg" %}"
                           style="color: transparent"
                         /><span>۲۱ شهریور ۱۴۰۳</span>
                       </li>
@@ -880,7 +882,7 @@
                           height="11"
                           decoding="async"
                           data-nimg="1"
-                          src="media/img/calender.svg"
+                          src="{% static "img/calender.svg" %}"
                           style="color: transparent"
                         /><span>۲۱ شهریور ۱۴۰۳</span>
                       </li>
@@ -934,7 +936,7 @@
                           height="11"
                           decoding="async"
                           data-nimg="1"
-                          src="media/img/calender.svg"
+                          src="{% static "img/calender.svg" %}"
                           style="color: transparent"
                         /><span>۲۱ شهریور ۱۴۰۳</span>
                       </li>
@@ -988,7 +990,7 @@
                           height="11"
                           decoding="async"
                           data-nimg="1"
-                          src="media/img/calender.svg"
+                          src="{% static "img/calender.svg" %}"
                           style="color: transparent"
                         /><span>۲۱ شهریور ۱۴۰۳</span>
                       </li>
@@ -1042,7 +1044,7 @@
                           height="11"
                           decoding="async"
                           data-nimg="1"
-                          src="media/img/calender.svg"
+                          src="{% static "img/calender.svg" %}"
                           style="color: transparent"
                         /><span>۲۱ شهریور ۱۴۰۳</span>
                       </li>
@@ -1096,7 +1098,7 @@
                           height="11"
                           decoding="async"
                           data-nimg="1"
-                          src="media/img/calender.svg"
+                          src="{% static "img/calender.svg" %}"
                           style="color: transparent"
                         /><span>۲۱ شهریور ۱۴۰۳</span>
                       </li>
@@ -1150,7 +1152,7 @@
                           height="11"
                           decoding="async"
                           data-nimg="1"
-                          src="media/img/calender.svg"
+                          src="{% static "img/calender.svg" %}"
                           style="color: transparent"
                         /><span>۲۱ شهریور ۱۴۰۳</span>
                       </li>
@@ -1216,7 +1218,7 @@
                         height="11"
                         decoding="async"
                         data-nimg="1"
-                        src="media/img/calender.svg"
+                        src="{% static "img/calender.svg" %}"
                         style="color: transparent"
                       /><span>۱۹ شهریور ۱۴۰۳</span>
                     </li>
@@ -1253,7 +1255,7 @@
                         height="11"
                         decoding="async"
                         data-nimg="1"
-                        src="media/img/calender.svg"
+                        src="{% static "img/calender.svg" %}"
                         style="color: transparent"
                       /><span>۱۹ شهریور ۱۴۰۳</span>
                     </li>
@@ -1290,7 +1292,7 @@
                         height="11"
                         decoding="async"
                         data-nimg="1"
-                        src="media/img/calender.svg"
+                        src="{% static "img/calender.svg" %}"
                         style="color: transparent"
                       /><span>۱۹ شهریور ۱۴۰۳</span>
                     </li>
@@ -1327,7 +1329,7 @@
                         height="11"
                         decoding="async"
                         data-nimg="1"
-                        src="media/img/calender.svg"
+                        src="{% static "img/calender.svg" %}"
                         style="color: transparent"
                       /><span>۱۹ شهریور ۱۴۰۳</span>
                     </li>
@@ -1364,7 +1366,7 @@
                         height="11"
                         decoding="async"
                         data-nimg="1"
-                        src="media/img/calender.svg"
+                        src="{% static "img/calender.svg" %}"
                         style="color: transparent"
                       /><span>۱۹ شهریور ۱۴۰۳</span>
                     </li>
@@ -1401,7 +1403,7 @@
                         height="11"
                         decoding="async"
                         data-nimg="1"
-                        src="media/img/calender.svg"
+                        src="{% static "img/calender.svg" %}"
                         style="color: transparent"
                       /><span>۱۹ شهریور ۱۴۰۳</span>
                     </li>
@@ -1438,7 +1440,7 @@
                         height="11"
                         decoding="async"
                         data-nimg="1"
-                        src="media/img/calender.svg"
+                        src="{% static "img/calender.svg" %}"
                         style="color: transparent"
                       /><span>۱۹ شهریور ۱۴۰۳</span>
                     </li>
@@ -1475,7 +1477,7 @@
                         height="11"
                         decoding="async"
                         data-nimg="1"
-                        src="media/img/calender.svg"
+                        src="{% static "img/calender.svg" %}"
                         style="color: transparent"
                       /><span>۱۹ شهریور ۱۴۰۳</span>
                     </li>
@@ -1512,7 +1514,7 @@
                         height="11"
                         decoding="async"
                         data-nimg="1"
-                        src="media/img/calender.svg"
+                        src="{% static "img/calender.svg" %}"
                         style="color: transparent"
                       /><span>۱۹ شهریور ۱۴۰۳</span>
                     </li>

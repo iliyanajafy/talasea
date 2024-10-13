@@ -40,12 +40,12 @@
                   src="{% static "img/arrowLeft.svg" %}"
                   style="color: transparent"
                 />
-                <li><span>ارزش طلا در کشورهای مختلف جهان چگونه است؟</span></li>
+                <li><span>{{context.title}}</span></li>
               </ul>
               <div class="blog_elementViewItem__dyPtL">
                 <div class="blog_itemContent__ODNOA">
                   <div class="blog_textContainer__w1ztU">
-                    <h1>ارزش طلا در کشورهای مختلف جهان چگونه است؟</h1>
+                    <h1>{{context.title}}</h1>
                   </div>
                 </div>
               </div>
@@ -54,7 +54,7 @@
                   <div class="moreItem_moreDataContent__dF8j_">
                     <a class="moreItem_moreDataItem__pSgI3" href="/mag/@ida"
                       ><span>توسط</span
-                      ><span class="moreItem_author__3kfgN">آیدا حسینی</span></a
+                      ><span class="moreItem_author__3kfgN">{{context.author.name}}</span></a
                     >
                   </div>
                   <div class="moreItem_moreDataContent__dF8j_">
@@ -68,7 +68,7 @@
                         data-nimg="1"
                         src="{% static "img/calender.svg" %}"
                         style="color: transparent"
-                      /><span>۱۰ شهریور ۱۴۰۳</span>
+                      /><span>{{context.day}} {{context.month}} {{context.year}}</span>
                     </li>
                   </div>
                   <div class="moreItem_moreDataContent__dF8j_">
@@ -82,7 +82,7 @@
                         data-nimg="1"
                         src="{% static "img/calender.svg" %}"
                         style="color: transparent"
-                      /><span>911 بازدید</span>
+                      /><span>{{context.view_count}} بازدید</span>
                     </li>
                   </div>
                 </ul>
@@ -91,14 +91,14 @@
                 <div class="blog_itemContent__ODNOA">
                   <div class="blog_imgContainer__BiBFG">
                     <img
-                      alt="ارزش طلا در کشورهای مختلف جهان چگونه است؟"
+                      alt="{{context.title}}"
                       loading="lazy"
                       width="946"
                       height="560"
                       decoding="async"
                       data-nimg="1"
                       class="blog_mainImg__fhLaU"
-                      src="{% static "img/1720502888991_sjdshfsfskfsf.webp" %}"
+                      src="{{context.blog_image.url}}"
                       style="color: transparent"
                     />
                   </div>
@@ -157,230 +157,29 @@
               <div class="blog_elementViewItem__dyPtL">
                 <div class="blog_itemContent__ODNOA">
                   <div class="blog_textContainer__w1ztU">
-                    <p>
-                      طلا به‌عنوان یکی از قدیمی‌ترین و باارزش‌ترین فلزات جهان،
-                      همواره جایگاه ویژه‌ای در اقتصاد و فرهنگ کشورهای مختلف
-                      داشته است. این فلز زرد رنگ نه‌تنها در صنعت جواهرسازی بلکه
-                      در سرمایه‌گذاری، ذخیره‌سازی ارزش و حتی در صنایع مختلف
-                      کاربردهای گسترده‌ای دارد. در این مقاله، به<strong>
-                        بررسی ارزش طلا در کشورهای مختلف جهان</strong
-                      >
-                      پرداخته و عواملی که بر قیمت و اهمیت آن تاثیر می‌گذارند،
-                      مورد بحث قرار می‌گیرد. با
-                      <a href="../../../../">طلاسی</a> همراه باشید.
-                    </p>
-                    <h2 id="نگاهی به گذشته و ارزش طلا در کشورهای مختلف">
-                      نگاهی به گذشته و ارزش طلا در کشورهای مختلف
-                    </h2>
-                    <p>
-                      در ابتدای این مطلب بگذارید نگاهی به قبل داشته باشیم. با
-                      این‌که تمام ما می‌دانیم طلا از دیرباز یک فلز نایاب و گران
-                      بوده، اما بررسی دوران قبل اطلاعات بهتر و بیشتری از این
-                      موضوع به ما می‌دهد.
-                    </p>
-                    <h3>دوران باستان</h3>
-                    <p>
-                      طلا از دوران باستان تا کنون به‌عنوان نمادی از ثروت و قدرت
-                      مورد توجه بوده است. مصریان باستان از طلا برای ساخت جواهرات
-                      و تزئینات استفاده می‌کردند و این فلز در فرهنگ‌های مختلف از
-                      جمله تمدن‌های میانه آمریکا، هند و چین نیز جایگاه ویژه‌ای
-                      داشته است.
-                    </p>
-                    <h3>‌قرون وسطی و رنسانس</h3>
-                    <p>
-                      در دوران قرون وسطی و رنسانس، طلا به‌عنوان وسیله‌ای برای
-                      تجارت و تبادل کالا به کار می‌رفت. کشورهایی مانند اسپانیا و
-                      پرتغال به دنبال کشف منابع جدید طلا در دنیای جدید بودند و
-                      این فلز نقش مهمی در توسعه اقتصاد جهانی ایفا می‌کرد.
-                    </p>
-                    <h3>‌دوران مدرن</h3>
-                    <p>
-                      در دوران مدرن، طلا همچنان به‌عنوان یک دارایی باارزش شناخته
-                      می‌شود. بانک‌های مرکزی کشورها به‌طور مداوم ذخایر طلای خود
-                      را افزایش می‌دهند و سرمایه‌گذاران به دنبال خرید طلا
-                      به‌عنوان یک پناهگاه امن در زمان‌های بحران اقتصادی هستند.
-                    </p>
-                    <p>&nbsp;</p>
-                    <h2 id="&nbsp;عوامل تاثیرگذار بر ارزش طلا">
-                      ‌عوامل تاثیرگذار بر ارزش طلا
-                    </h2>
-                    <p>
-                      حال که دانستیم در گذشته طلا به چه شکل بوده، در این بخش
-                      نگاهی به عوامل تاثیرگذار بر ارزش طلا می‌اندازیم.
-                    </p>
-                    <h3>‌تقاضای صنعتی و جواهرات</h3>
-                    <p>
-                      یکی از عوامل اصلی تاثیرگذار بر
-                      <a href="../../../../gold-price" target="_blank"
-                        >قیمت طلا</a
-                      >، تقاضا در صنعت جواهرسازی و کاربردهای صنعتی است. افزایش
-                      تقاضا در این بخش‌ها می‌تواند به افزایش قیمت طلا منجر شود.
-                    </p>
-                    <h3>‌سیاست‌های مالی و پول</h3>
-                    <p>
-                      سیاست‌های مالی و پولی کشورها نیز نقش مهمی در تعیین ارزش
-                      طلا دارند. کاهش نرخ بهره، افزایش نقدینگی و سیاست‌های تسهیل
-                      پولی می‌توانند به افزایش قیمت طلا منجر شوند.
-                    </p>
-                    <h3>‌نوسانات ارز</h3>
-                    <p>
-                      نوسانات ارزش ارزهای مختلف، به ویژه دلار آمریکا، می‌تواند
-                      بر قیمت طلا تاثیر بگذارد. کاهش ارزش دلار معمولا به افزایش
-                      قیمت طلا منجر می‌شود، زیرا طلا به‌عنوان یک دارایی جایگزین
-                      در برابر کاهش ارزش پول مطرح می‌شود.
-                    </p>
-                    <h3>‌شرایط اقتصادی و سیاسی</h3>
-                    <p>
-                      شرایط اقتصادی و سیاسی جهان نیز می‌تواند به‌طور مستقیم بر
-                      ارزش طلا تاثیر بگذارد. بحران‌های اقتصادی، تنش‌های سیاسی و
-                      جنگ‌ها معمولا باعث افزایش تقاضا برای طلا به‌عنوان یک
-                      دارایی امن می‌شوند.
-                    </p>
-                    <p>&nbsp;</p>
-                    <h2 id="&nbsp;ارزش طلا در کشورهای مختلف">
-                      ‌ارزش طلا در کشورهای مختلف
-                    </h2>
-                    <p>
-                      حال به سراغ بررسی ارزش طلا در کشورهای مختلف می‌رویم. این
-                      بررسی به ما نشان می‌دهد که طلا تا چه اندازه و در چه
-                      کشورهایی رکن اصلی اقتصاد است.
-                    </p>
-                    <h3>‌ایالات متحده آمریکا</h3>
-                    <p>
-                      ایالات متحده آمریکا به‌عنوان بزرگ‌ترین اقتصاد جهان، نقش
-                      مهمی در تعیین ارزش جهانی طلا دارد. بانک مرکزی آمریکا
-                      (فدرال رزرو) با سیاست‌های مالی و پولی خود می‌تواند تاثیر
-                      قابل‌توجهی بر قیمت طلا بگذارد. علاوه بر این، آمریکا یکی از
-                      بزرگ‌ترین مصرف‌کنندگان طلا در صنعت جواهرسازی و
-                      سرمایه‌گذاری است.
-                    </p>
-                    <h3>‌چین</h3>
-                    <p>
-                      چین یکی از بزرگ‌ترین تولیدکنندگان و مصرف‌کنندگان طلا در
-                      جهان است. این کشور نه‌تنها در صنعت جواهرسازی بلکه در
-                      ذخیره‌سازی ارزش نیز از طلا استفاده می‌کند. بانک مرکزی چین
-                      نیز با افزایش ذخایر طلای خود نقش مهمی در بازار جهانی ایفا
-                      می‌کند.
-                    </p>
-                    <h3>‌هند</h3>
-                    <p>
-                      هند به‌عنوان یکی از بزرگ‌ترین مصرف‌کنندگان طلا در جهان،
-                      تقاضای بالایی برای این فلز دارد. طلا در فرهنگ هند جایگاه
-                      ویژه‌ای دارد و به‌عنوان یک دارایی مهم در مراسم‌ها و
-                      جشن‌های مختلف استفاده می‌شود. علاوه بر این، طلا به‌عنوان
-                      یک سرمایه‌گذاری مهم در میان مردم هند مطرح است.
-                    </p>
-                    <h3>‌روسیه</h3>
-                    <p>
-                      روسیه نیز یکی از بزرگ‌ترین تولیدکنندگان و ذخیره‌کنندگان
-                      طلا در جهان است. بانک مرکزی روسیه به‌طور مداوم ذخایر طلای
-                      خود را افزایش می‌دهد و این کشور نقش مهمی در بازار جهانی
-                      طلا ایفا می‌کند. افزایش تحریم‌های اقتصادی علیه روسیه نیز
-                      باعث افزایش تقاضا برای طلا در این کشور شده است.
-                    </p>
-                    <h3>‌کشورهای اروپایی</h3>
-                    <p>
-                      کشورهای اروپایی نیز نقش مهمی در بازار جهانی طلا دارند.
-                      بانک‌های مرکزی کشورهای اروپایی از جمله آلمان، فرانسه و
-                      ایتالیا ذخایر طلای قابل‌توجهی دارند و این کشورها به‌عنوان
-                      مراکز مهمی برای تجارت و سرمایه‌گذاری طلا شناخته می‌شوند.
-                    </p>
-                    <p>&nbsp;</p>
-                    <h2 id="&nbsp;نقش بانک‌های مرکزی در ارزش طلا">
-                      ‌نقش بانک‌های مرکزی در ارزش طلا
-                    </h2>
-                    <p>
-                      بانک‌های مرکزی کشورها از ذخایر طلا به‌عنوان یکی از
-                      ابزارهای مهم ذخیره ارزش و پشتیبانی از ارز ملی استفاده
-                      می‌کنند. افزایش ذخایر طلا توسط بانک‌های مرکزی می‌تواند به
-                      افزایش ارزش این فلز منجر شود.
-                    </p>
-                    <h3>‌سیاست‌های پولی و ارزش طلا</h3>
-                    <p>
-                      سیاست‌های پولی بانک‌های مرکزی نیز می‌تواند تاثیر
-                      قابل‌توجهی بر قیمت طلا داشته باشد. کاهش نرخ بهره،
-                      سیاست‌های تسهیل پولی و افزایش نقدینگی معمولا به افزایش
-                      قیمت طلا منجر می‌شود.
-                    </p>
-                    <p>&nbsp;</p>
-                    <h2 id="&nbsp;تاثیر بازارهای مالی بر ارزش طلا">
-                      ‌تاثیر بازارهای مالی بر ارزش طلا
-                    </h2>
-                    <p>
-                      بازارهای آتی یکی از ابزارهای مهم برای تعیین قیمت طلا در
-                      آینده هستند. قراردادهای آتی طلا به سرمایه‌گذاران این امکان
-                      را می‌دهند که بر روی قیمت طلا در آینده شرط‌بندی کنند و این
-                      می‌تواند به نوسانات قیمت این فلز منجر شود.
-                    </p>
-                    <h3>‌بازارهای سهام</h3>
-                    <p>
-                      بازارهای سهام نیز می‌توانند به‌طور غیرمستقیم بر قیمت طلا
-                      تاثیر بگذارند. افزایش نوسانات در بازارهای سهام معمولا باعث
-                      افزایش تقاضا برای طلا به‌عنوان یک دارایی امن می‌شود.
-                    </p>
-                    <h3>‌بازارهای ارز</h3>
-                    <p>
-                      نوسانات در بازارهای ارز، به‌ویژه دلار آمریکا، می‌تواند
-                      تاثیر قابل‌توجهی بر قیمت طلا داشته باشد. کاهش ارزش دلار
-                      معمولا به افزایش قیمت طلا منجر می‌شود.
-                    </p>
-                    <p>&nbsp;</p>
-                    <h2 id="&nbsp;تحلیل روندهای آینده ارزش طلا">
-                      تحلیل روندهای آینده ارزش طلا
-                    </h2>
-                    <p>
-                      پیش‌بینی قیمت طلا یکی از موضوعات پیچیده و چالش‌برانگیز
-                      است. عوامل مختلفی از جمله تقاضای صنعتی و جواهرات،
-                      سیاست‌های مالی و پولی، نوسانات ارز و شرایط اقتصادی و سیاسی
-                      می‌توانند بر قیمت طلا تاثیر بگذارند.
-                    </p>
-                    <h3>‌تاثیر تکنولوژی‌های جدید</h3>
-                    <p>
-                      توسعه تکنولوژی‌های جدید می‌تواند به افزایش تقاضا برای طلا
-                      در صنایع مختلف منجر شود. به‌عنوان مثال، استفاده از طلا در
-                      صنعت الکترونیک و تکنولوژی‌های نوین می‌تواند تقاضا برای این
-                      فلز را افزایش دهد.
-                    </p>
-                    <p>&nbsp;</p>
-                    <h2 id="جمع‌بندی">سخن پایانی</h2>
-                    <p>
-                      طلا به‌عنوان یکی از مهم‌ترین فلزات جهان، نقش بسیار مهمی در
-                      اقتصاد و فرهنگ کشورهای مختلف ایفا می‌کند. عوامل مختلفی از
-                      جمله تقاضای صنعتی و جواهرات، سیاست‌های مالی و پولی،
-                      نوسانات ارز و شرایط اقتصادی و سیاسی می‌توانند بر ارزش طلا
-                      تاثیر بگذارند. باتوجه‌به نقش مهم طلا در ذخیره‌سازی ارزش و
-                      سرمایه‌گذاری، تحلیل و پیش‌بینی روندهای آینده قیمت این فلز
-                      برای سرمایه‌گذاران و سیاست‌گذاران اقتصادی از اهمیت ویژه‌ای
-                      برخوردار است.
-                    </p>
+                    {{ context.text|safe }}
                   </div>
                 </div>
               </div>
               <div class="blog_profileContainer__RPcCD">
                 <div class="blog_profileImg__SI_2X">
                   <img
-                    alt="آیدا حسینی  هستم، یه علاقه‌مند به بازارهای مالی و مخصوصاً طلا. از همون دوران جوانی، با ذره‌بین دنبال فرصت‌های سرمایه‌گذاری بودم و سعی می‌کردم رازهای پنهان این بازارها رو کشف کنم. بعد از گذروندن سال‌ها مطالعه و تجربه، تصمیم گرفتم دانسته‌هام رو با شما به اشتراک بذارم."
+                    alt="{{context.author.discription}}"
                     loading="lazy"
                     width="85"
                     height="85"
                     decoding="async"
                     data-nimg="1"
                     class="blog_mainImg__fhLaU"
-                    src="media/img/1700036169632_3242424.webp"
+                    src="{{context.author.author_img.url}}"
                     style="color: transparent"
                   />
                 </div>
                 <div class="blog_profileDetail__rMeKy">
                   <a class="blog_profileName__OYf6f" href="/mag/@ida"
-                    >آیدا حسینی</a
+                    >{{context.author.name}}</a
                   ><span>تولید محتوا</span>
-                  <p>
-                    آیدا حسینی هستم، یه علاقه‌مند به بازارهای مالی و مخصوصاً
-                    طلا. از همون دوران جوانی، با ذره‌بین دنبال فرصت‌های
-                    سرمایه‌گذاری بودم و سعی می‌کردم رازهای پنهان این بازارها رو
-                    کشف کنم. بعد از گذروندن سال‌ها مطالعه و تجربه، تصمیم گرفتم
-                    دانسته‌هام رو با شما به اشتراک بذارم.
-                  </p>
+                  <p>{{context.author.discription}}</p>
                   <div class="blog_profileMedia__lNVy_"></div>
                 </div>
               </div>
@@ -586,74 +385,68 @@
                   >
                 </div>
               </div>
-              <div class="blog_comment__y9sjM">
-                <h3>دیدگاه شما</h3>
-                <div class="blog_commentBox__Brqe6">
-                  <div class="blog_topBox__LRCwh">
-                    <div class="blog_commentImg__JJLrP">
-                      <img
-                        alt="دیدگاه کاربر نسبت به مقاله"
-                        loading="lazy"
-                        width="40"
-                        height="40"
-                        decoding="async"
-                        data-nimg="1"
-                        src="media/img/comment.webp"
-                        style="color: transparent"
-                      />
-                    </div>
-                    <div class="blog_commentName__jAV7q">
-                      <input placeholder="نام*" class="" type="text" value="" />
-                    </div>
-                    <div class="blog_commentEmail__6NU32">
-                      <input
-                        placeholder="ایمیل*"
-                        class=""
-                        type="email"
-                        value=""
-                      />
-                    </div>
-                  </div>
-                  <div class="blog_boxBody__egn2_">
-                    <textarea
-                      cols="30"
-                      rows="10"
-                      placeholder="دیدگاه"
-                      class=""
-                    ></textarea>
-                  </div>
-                  <div class="blog_boxButton__7FxdH">
-                    <button class="button-container" id="">
-                      <div class="dots-container">
-                        <div style="background-color: rgb(107, 112, 116)"></div>
-                        <div style="background-color: rgb(107, 112, 116)"></div>
-                        <div style="background-color: rgb(107, 112, 116)"></div>
-                        <div style="background-color: rgb(107, 112, 116)"></div>
+              <form method="POST">
+                {% csrf_token %}
+                <div class="blog_comment__y9sjM">
+                  <h3>دیدگاه شما</h3>
+                  <div class="blog_commentBox__Brqe6">
+                    <div class="blog_topBox__LRCwh">
+                      <div class="blog_commentImg__JJLrP">
+                        <img
+                          alt="دیدگاه کاربر نسبت به مقاله"
+                          loading="lazy"
+                          width="40"
+                          height="40"
+                          decoding="async"
+                          data-nimg="1"
+                          src="{% static "img/comment.webp" %}"
+                          style="color: transparent"
+                        />
                       </div>
-                      <span class="buttonData">ارسال دیدگاه</span>
-                    </button>
+                      <div class="blog_commentName__jAV7q">
+                        {{ form.username }}
+                      </div>
+                      <div class="blog_commentEmail__6NU32">
+                        {{ form.email }}
+                      </div>
+                    </div>
+                    <div class="blog_boxBody__egn2_">
+                      {{ form.review_text }}
+                    </div>
+                    <div class="blog_boxButton__7FxdH">
+                      <div class="button-container" id="">
+                        <div class="dots-container">
+                          <div style="background-color: rgb(107, 112, 116)"></div>
+                          <div style="background-color: rgb(107, 112, 116)"></div>
+                          <div style="background-color: rgb(107, 112, 116)"></div>
+                          <div style="background-color: rgb(107, 112, 116)"></div>
+                        </div>
+                        <button type="submit" class="buttonData" >ارسال دیدگاه</button>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
+            </form>
               <div class="blog_allComments__AL2CC">
                 <div class="blog_topTitle__2Kn_J">
-                  <h3>2 دیدگاه</h3>
+                  <h3>{{many}} دیدگاه</h3>
                   <div class="blog_line__8NVX0"></div>
                 </div>
                 <ul class="blog_allCommentsBody__yMgZK">
+                  {% for review in reviews %}
                   <li class="blog_commentItem__BKGOv">
                     <div class="blog_commentItemTop__YgZ5J">
                       <img
-                        alt="دیدگاه علی نسبت به مقاله"
+                        alt="دیدگاه {{review.username}} نسبت به مقاله"
                         loading="lazy"
                         width="35"
                         height="35"
                         decoding="async"
                         data-nimg="1"
                         class="blog_profilePic__A8lbJ"
-                        src="media/img/comment.webp"
+                        src="{% static "img/comment.webp" %}"
                         style="color: transparent"
-                      /><span class="blog_name__FBDgv">علی</span>
+                      /><span class="blog_name__FBDgv">{{review.username}}</span>
                       <div class="blog_date__UdZJt">
                         <img
                           alt="تاریخ انتشار مقاله"
@@ -668,42 +461,11 @@
                       </div>
                     </div>
                     <div class="blog_commentItemBody__Rdycg">
-                      <p>جالب بود</p>
+                      <p>{{review.review_text}}</p>
                     </div>
                   </li>
-                  <li class="blog_commentItem__BKGOv">
-                    <div class="blog_commentItemTop__YgZ5J">
-                      <img
-                        alt="دیدگاه رضا معاوی نسبت به مقاله"
-                        loading="lazy"
-                        width="35"
-                        height="35"
-                        decoding="async"
-                        data-nimg="1"
-                        class="blog_profilePic__A8lbJ"
-                        src="media/img/comment.webp"
-                        style="color: transparent"
-                      /><span class="blog_name__FBDgv">رضا معاوی</span>
-                      <div class="blog_date__UdZJt">
-                        <img
-                          alt="تاریخ انتشار مقاله"
-                          loading="lazy"
-                          width="11"
-                          height="11"
-                          decoding="async"
-                          data-nimg="1"
-                          src="{% static "img/calender.svg" %}"
-                          style="color: transparent"
-                        /><span>۲۲ شهریور ۱۴۰۳</span>
-                      </div>
-                    </div>
-                    <div class="blog_commentItemBody__Rdycg">
-                      <p>
-                        آیدا عزیز از اینکه زمان زیادی و صرف تهیه این مقاله کامل
-                        و آموزنده کردی از شما بسیار سپاسگزارم
-                      </p>
-                    </div>
-                  </li>
+                  
+                  {% endfor %}
                 </ul>
               </div>
             </div>
