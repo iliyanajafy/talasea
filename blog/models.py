@@ -18,6 +18,13 @@ MONTHS = (
     ('بهمن', 'bahman'),
     ('اسفند', 'esfand'),
 )
+PHRASES = (
+    ('آموزش خرید و فروش طلا', 'آموزش خرید و فروش طلا'),
+    ('سرمایه گذاری با طلا', 'سرمایه گذاری با طلا'),
+    ('بورس و بازار جهانی', 'بورس و بازار جهانی'),
+    ('دانستنی طلا', 'دانستنی طلا'),
+    ('سکه طلا', 'سکه طلا'),
+)
 
 
 class Blog(models.Model):
@@ -34,6 +41,7 @@ class Blog(models.Model):
     month = models.CharField(choices=MONTHS, max_length=50)
     year = models.IntegerField()
     view_count = models.PositiveIntegerField(default=0)
+    subject  = models.CharField(choices=PHRASES, max_length=50,default="دانستنی طلا")
     def __str__(self):
         return self.title
     
@@ -59,3 +67,13 @@ class Blog_review(models.Model):
 
     def __str__(self):
         return self.username
+    
+
+class Blog_rating(models.Model):
+    blog = models.ForeignKey('Blog', on_delete=models.CASCADE, related_name='ratings')
+    rating = models.PositiveSmallIntegerField( validators=[MinValueValidator(0), MaxValueValidator(5)],
+        default=0)
+    rated_at = models.DateTimeField(auto_now_add=True)
+
+    def __str__(self):
+        return f"{self.blog.title} - {self.rating}"

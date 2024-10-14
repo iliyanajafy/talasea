@@ -1,6 +1,11 @@
 {% extends "base_blog.html" %}
 {% block content %}
 {% load static %}
+  <style>
+    .star-rating::before {
+      width:{{rating}}%; 
+    }
+  </style>
     <div class="wp-page-container">
       <div class="wp-page-content">
         <div class="blog_pagebody">
@@ -18,7 +23,7 @@
                   src="{% static "img/arrowLeft.svg" %}"
                   style="color: transparent"
                 />
-                <li><a href="/mag">مجله طلاسی</a></li>
+                <li><a href="{% url "blogs" %}">مجله طلاسی</a></li>
                 <img
                   alt="فلش چپ"
                   loading="lazy"
@@ -29,7 +34,7 @@
                   src="{% static "img/arrowLeft.svg" %}"
                   style="color: transparent"
                 />
-                <li><a href="/mag/facts">دانستنی‌های طلا</a></li>
+                <li><a href="/mag/facts">{{context.subject}}</a></li>
                 <img
                   alt="فلش چپ"
                   loading="lazy"
@@ -151,7 +156,7 @@
                   <div class="star-rating"></div>
                 </div>
                 <div class="blog_texts__xwi2r">
-                  <span>4.52 - (9 امتیاز)</span>
+                  <span>{{rating2}} - ({{count_rating}}امتیاز)</span>
                 </div>
               </div>
               <div class="blog_elementViewItem__dyPtL">
@@ -474,66 +479,21 @@
       </div>
     </div>
     <script>
-      function changeAfterwidht(newwidth) {
-        // Find the stylesheet
-        const styleSheet = document.styleSheets[0];
-
-        // Construct the new rule
-        const rule = `.star-rating::before { content: "★★★★★"; font-size: 36px; color: #ffd700; position: absolute; top: 0; right: 0; z-index: 1; width:  ${newwidth}; overflow: hidden }`;
-
-        // Remove the existing rule if it exists
-        for (let i = 0; i < styleSheet.cssRules.length; i++) {
-          if (styleSheet.cssRules[i].selectorText === ".star-rating::before") {
-            styleSheet.deleteRule(i);
-            break;
-          }
-        }
-
-        // Insert the new rule
-        styleSheet.insertRule(rule, styleSheet.cssRules.length);
-      }
-
-      // Call the function to change the ::after color
-      changeAfterwidht("40%");
-
-
       function sendValue(value) {
-        fetch("/submit_value/", {
-          method: "POST",
+        fetch('/blog/{{context.blogid}}/', {
+          method: 'POST',
           headers: {
-            "Content-Type": "application/json",
-            "X-CSRFToken": getCookie("csrftoken"), // Ensure the CSRF token is sent for Django
+            'Content-Type': 'application/json',
+            'X-CSRFToken': '{{ csrf_token }}'
           },
-          body: JSON.stringify({ value: value }),
-        })
-          .then((response) => {
-            if (response.ok) {
-              console.log("Value submitted successfully!");
-            } else {
-              console.error("Failed to submit value.");
-            }
+          body: JSON.stringify({ rate: value })
+        }).then(response => response.json())
+          .then(data => {
+            console.log('Success:', data);
           })
           .catch((error) => {
-            console.error("Error:", error);
+            console.error('Error:', error);
           });
-      }
-
-      // Function to get the CSRF token
-      function getCookie(name) {
-        let cookieValue = null;
-        if (document.cookie && document.cookie !== "") {
-          const cookies = document.cookie.split(";");
-          for (let i = 0; i < cookies.length; i++) {
-            const cookie = cookies[i].trim();
-            if (cookie.substring(0, name.length + 1) === name + "=") {
-              cookieValue = decodeURIComponent(
-                cookie.substring(name.length + 1)
-              );
-              break;
-            }
-          }
         }
-        return cookieValue;
-      }
     </script>
 {% endblock content %}
