@@ -1,0 +1,117 @@
+{% extends "base_login.html" %}
+{% load static %}
+{% block content %}
+{% load custom_filters %}
+<link rel="stylesheet" href="{% static "css/login2.css" %}">
+<div class="main container-fluid">
+  <div class="rightpage">
+    <div class="inforight">
+      <span class="span-info">ورود و ثبت نام</span>
+    </div>
+    <div class="form">
+      <a href="#">
+        <img src="{% static "img/logo.svg" %}" alt="talasealogo" class="logo" />
+      </a>
+      <div class="input-form">
+        <span class="span-850">ورود به پروفایل کاربری</span>
+        <div class="">
+          <p class="dis-new">
+            برای حفظ امنیت دارایی شما، مبالغ حاصل از معاملات، فقط به حساب
+            های خودتان قابل برداشت خواهد بود. در این روش حتی اگر به گوشی خود
+            دسترسی نداشته باشید، دارایی شما کاملاً امن خواهد بود.
+          </p>
+          <p class="dis-new">
+            شماره کارت، شماره همراه و کدملی باید متعلق به یک شخص باشد.
+          </p>
+        </div>
+        <form method="post" action="{% url 'update' %}">
+          {% csrf_token %}
+          <div class="input-container">
+            <span class="label-input">کد ملی</span>
+            <div class="input-content">
+              <input
+                type="tel"
+                maxlength="14"
+                placeholder="لطفا کد ملی خود را وارد کنید"
+                class="input-context"
+                name = "melicode"
+              />
+            </div>
+          </div>
+          <span class="text-new">تاریخ تولد:</span>
+          <div class="three-container">
+            <div class="oneofthree">
+              <div class="marginwanted">
+                <div class="intheone">
+                  <span class="inone">روز</span>
+                  <div class="inacc">
+                    <input maxlength="2" dir="ltr" type="tel" value="" name = "day"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="oneofthree">
+              <div class="marginwanted">
+                <div class="intheone">
+                  <span class="inone">ماه</span>
+                  <div class="inacc">
+                    <input maxlength="2" dir="ltr" type="tel" value="" name = "month"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="oneofthree">
+              <div class="marginwanted">
+                <div class="intheone">
+                  <span class="inone">سال</span>
+                  <div class="inacc">
+                    <input maxlength="4" dir="ltr" type="tel" value="" name = "year"/>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="btn-container d-grid w-100">
+            <button class="btn btn-block btn-log">تایید اطلاعات</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    {% if error %}
+      <div class="alert alert-danger alert-dismissible fade show khata">
+          <strong>خطا!</strong> {{ error }}
+      </div>
+    {% endif %}
+  </form>
+  <div class="leftpage">
+    <div class="img-container">
+      <img src="{% static "img/Untitled-1.png" %}" alt="" class="img-talasea" />
+    </div>
+    <div class="content-login">
+      <h1 class="account_subject">
+        طلاسی، پلتفرم خرید و فروش طلا بدون اجرت
+      </h1>
+      <h2 class="account_description">
+        با قبول تمامی قوانین و مقررات در طلاسی، ثبت نام را انجام می‌دهم.
+      </h2>
+      <h2 class="account_description">
+        طلاسی، بستر آنلاین خرید و فروش طلا
+      </h2>
+    </div>
+  </div>
+</div>
+{% endblock content %}
+    <div class="widget-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120">
+        <path
+          d="M60.19,53.75a3,3,0,1,0,3.06,3A3,3,0,0,0,60.19,53.75Zm-11.37,0a3,3,0,1,0,3.06,3A3,3,0,0,0,48.81,53.75Zm45.94,4A35,35,0,1,0,52.75,92v12.76s14.55-4.25,30.53-19.28C94.68,74.74,94.75,59.41,94.75,59.41l0,0C94.74,58.87,94.75,58.3,94.75,57.72Zm-10.14.6s0,10.64-8,18.09A57.93,57.93,0,0,1,53,89.8V80.34A24.29,24.29,0,1,1,84.61,57.16c0,.4,0,.8,0,1.19ZM70.69,53.75a3,3,0,1,0,3.06,3A3,3,0,0,0,70.69,53.75Z"
+          transform="translate(0.25 0.25)"
+          style="fill: #ffffff"
+        ></path>
+      </svg>
+    </div>
+    <div class="bell-container">
+      <img src="{% static "img/bell.svg" %}" alt="" class="bell" />
+    </div>
+    <script src="{% static "js/bootstrap.js" %}"></script>
+                    

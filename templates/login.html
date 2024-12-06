@@ -1,33 +1,43 @@
 {% extends "base_login.html" %}
 {% load static %}
 {% block content %}
+
     <div class="main container-fluid">
       <div class="rightpage">
         <div class="inforight">
           <span class="span-info">ورود به پروفایل کاربری</span>
         </div>
-        <div class="form">
-          <a href="#">
-            <img src="{% static "img/logo.svg" %}" alt="talasealogo" class="logo" />
-          </a>
-          <div class="input-form">
-            <span class="span-850">ورود به پروفایل کاربری</span>
-            <div class="input-container">
-              <span class="label-input">شماره تلفن همراه </span>
-              <div class="input-content">
-                <input
-                  type="tel"
-                  maxlength="14"
-                  placeholder="لطفا شماره موبایل خود را وارد کنید"
-                  class="input-context"
-                />
+        <form  method="post" action="{% url 'login' %}">
+          {% csrf_token %}
+          <div class="form">
+            <a href="#">
+              <img src="{% static "img/logo.svg" %}" alt="talasealogo" class="logo" />
+            </a>
+            <div class="input-form">
+              <span class="span-850">ورود به پروفایل کاربری</span>
+              <div class="input-container">
+                <span class="label-input">شماره تلفن همراه </span>
+                <div class="input-content">
+                  <input type="tel" class="input-context" id="email" placeholder="لطفا شماره تلفن را وارد کنید" name="username">
+                </div>
+              </div>
+              <div class="input-container">
+                <span class="label-input">رمز عبور</span>
+                <div class="input-content">
+                  <input type="password" class="input-context" id="password" placeholder="لطفا رمز عبور را وارد کنید" name="password">
+                </div>
+              </div>
+              <div class="btn-container d-grid w-100">
+                <button type="submit" class="btn btn-block btn-log">ثبت</button>
               </div>
             </div>
-            <div class="btn-container d-grid w-100">
-              <button class="btn btn-block btn-log">مرحله بعد</button>
-            </div>
           </div>
-        </div>
+          {% if error %}
+              <div class="alert alert-danger alert-dismissible fade show khata">
+                  <strong>خطا!</strong> {{ error }}
+              </div>
+          {% endif %}
+        </form>
       </div>
       <div class="leftpage">
         <div class="img-container">

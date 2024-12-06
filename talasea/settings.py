@@ -44,7 +44,13 @@ INSTALLED_APPS = [
 
     'blog.apps.BlogConfig',
     'markdownx',
+    'register.apps.RegisterConfig',
+
 ]
+
+
+
+
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
