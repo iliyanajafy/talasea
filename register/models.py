@@ -7,3 +7,7 @@ class Custom_user(models.Model):
     year = models.IntegerField(null=True,blank=True)
     month = models.IntegerField(null=True,blank=True)
     day = models.IntegerField(null=True,blank=True)
+
+
+    def __str__(self):
+        return f"{self.user.username}"

@@ -29,18 +29,28 @@
       <img src="{% static "img/Screenshot 2024-08-19 110423.png" %}" alt=""
       class="darkmode" />
       <div class="nav-divider"></div>
-      <a href="{% url "login" %}" class="login">
-        <button class="btn btn-nav">
-          <img src="{% static "img/login.svg" %}" alt="" class="img-login" />
-          <span class="login-span">ورود</span>
+      {% if not user.is_authenticated %}
+        <a href="{% url "login" %}" class="login">
+          <button class="btn btn-nav">
+            <img src="{% static "img/login.svg" %}" alt="" class="img-login" />
+            <span class="login-span">ورود</span>
+          </button>
+        </a>
+        <a href="{% url "login" %}">
+          <button class="btn btn-nav btn-nav-reg">
+            <img src="{% static "img/signUp.svg" %}" alt="" class="img-login" />
+            <span class="login-span">ثبت نام</span>
+          </button>
+        </a>
+      {% endif %}
+      {% if user.is_authenticated %}
+      <a href="{% url "logout" %}">
+        <button class=" outlineBtn">
+          <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg" class="md:w-4"><path d="M9.99967 10.0703C12.3009 10.0703 14.1663 8.20485 14.1663 5.90367C14.1663 3.60248 12.3009 1.737 9.99967 1.737C7.69849 1.737 5.83301 3.60248 5.83301 5.90367C5.83301 8.20485 7.69849 10.0703 9.99967 10.0703Z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path><path d="M17.1585 18.4036C17.1585 15.1786 13.9501 12.5703 10.0001 12.5703C6.05013 12.5703 2.8418 15.1786 2.8418 18.4036" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path></svg>
+          <span class="login-span">خروج از حساب</span>
         </button>
       </a>
-      <a href="{% url "login" %}">
-        <button class="btn btn-nav btn-nav-reg">
-          <img src="{% static "img/signUp.svg" %}" alt="" class="img-login" />
-          <span class="login-span">ثبت نام</span>
-        </button>
-      </a>
+      {% endif %} 
     </div>
   </div>
 </nav>

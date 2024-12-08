@@ -20,7 +20,7 @@
           <div class="main-wp-texts">
             <a class="main_wp_itemLink" href="/mag/facts"
               ><div class="main_itemLinkContent">
-                <span>دانستنی‌های طلا</span>
+                <span>{{bigone.subject}}</span>
               </div></a
             >
             <h1 class="main-wp-title">
@@ -71,17 +71,18 @@
         </article>
       </div>
       <div class="main_leftArticles">
+        {% for blog in big_side %}
         <article class="main_leftArticleItem">
-          <a class="main_itemImg" href="/mag/trade-gold/what-is-a-gold-mazanne"
+          <a class="main_itemImg" href="{% url "blog" blog.blogid %}"
             ><div class="main_itemImgContent">
               <img
-                alt="مظنه طلا چیست؟ فرمول تبدیل مظنه به گرم طلای ۱۸ عیار"
+                alt="{{blog.title}}"
                 loading="lazy"
                 width="190"
                 height="150"
                 decoding="async"
                 data-nimg="1"
-                src="media/img/1720517896271_what-is-a-gold-mazanne.webp"
+                src="{{blog.blog_image.url}}"
                 style="color: transparent"
                 class="efect-img"
               /></div
@@ -89,21 +90,21 @@
           <div class="main-wp-itemTexts">
             <a class="main_wp_itemLink" href="/mag/trade-gold"
               ><div class="main_itemLinkContent">
-                <span>آموزش خرید و فروش طلا</span>
+                <span>{{blog.subject}}</span>
               </div></a
             >
             <h2 class="main_title">
               <a
-                href="/mag/trade-gold/what-is-a-gold-mazanne"
+                href="{% url "blog" blog.blogid%}"
                 class="underline-hover-effect2"
-                >مظنه طلا چیست؟ فرمول تبدیل مظنه به گرم طلای ۱۸ عیار</a
+                >{{blog.title}}</a
               >
             </h2>
             <ul class="moreItem_moreData">
               <div class="moreItem_moreDataContent">
                 <a class="moreItem_moreDataItem" href="/mag/@rahimi"
                   ><span>توسط</span
-                  ><span class="moreItem_author2">مریم رحیمی مقدم</span></a
+                  ><span class="moreItem_author2">{{blog.author.name}}</span></a
                 >
               </div>
               <div class="moreItem_moreDataContent">
@@ -117,120 +118,13 @@
                     data-nimg="1"
                     src="{% static "img/calender.svg" %}"
                     style="color: transparent"
-                  /><span>۱۰ شهریور ۱۴۰۳</span>
+                  /><span>{{blog.day}} {{blog.month}} {{blog.year}}</span>
                 </li>
               </div>
             </ul>
           </div>
         </article>
-        <article class="main_leftArticleItem">
-          <a
-            class="main_itemImg"
-            href="/mag/stock/disadvantages-of-buying-coins-on-the-stock-exchange"
-            ><div class="main_itemImgContent">
-              <img
-                alt="خرید سکه در بورس و مزایا و معایب آن"
-                loading="lazy"
-                width="190"
-                height="150"
-                decoding="async"
-                data-nimg="1"
-                src="media/img/1720521034133_disadvantages-of-buying-coins-on-the-stock-exchange.webp"
-                style="color: transparent"
-                class="efect-img"
-              /></div
-          ></a>
-          <div class="main-wp-itemTexts">
-            <a class="main_wp_itemLink" href="/mag/stock"
-              ><div class="main_itemLinkContent">
-                <span>بورس و بازار جهانی</span>
-              </div></a
-            >
-            <h2 class="main_title">
-              <a
-                href="/mag/stock/disadvantages-of-buying-coins-on-the-stock-exchange"
-                class="underline-hover-effect2"
-                >خرید سکه در بورس و مزایا و معایب آن</a
-              >
-            </h2>
-            <ul class="moreItem_moreData">
-              <div class="moreItem_moreDataContent">
-                <a class="moreItem_moreDataItem" href="/mag/@rahimi"
-                  ><span>توسط</span
-                  ><span class="moreItem_author2">مریم رحیمی مقدم</span></a
-                >
-              </div>
-              <div class="moreItem_moreDataContent">
-                <li class="moreItem_moreDataItem">
-                  <img
-                    alt="تاریخ انتشار مقاله"
-                    loading="lazy"
-                    width="11"
-                    height="11"
-                    decoding="async"
-                    data-nimg="1"
-                    src="{% static "img/calender.svg" %}"
-                    style="color: transparent"
-                  /><span>۱۱ شهریور ۱۴۰۳</span>
-                </li>
-              </div>
-            </ul>
-          </div>
-        </article>
-        <article class="main_leftArticleItem">
-          <a
-            class="main_itemImg"
-            href="/mag/trade-gold/important-points-in-buying-molten-gold"
-            ><div class="main_itemImgContent">
-              <img
-                alt="نکات کلیدی در خرید طلای آب شده چگونه طلای اصل را تشخیص دهیم؟"
-                loading="lazy"
-                width="190"
-                height="150"
-                decoding="async"
-                data-nimg="1"
-                src="media/img/1720077681741_ldksjsjdsdawewrw.webp"
-                style="color: transparent"
-                class="efect-img"
-              /></div
-          ></a>
-          <div class="main-wp-itemTexts">
-            <a class="main_wp_itemLink" href="/mag/trade-gold"
-              ><div class="main_itemLinkContent">
-                <span>آموزش خرید و فروش طلا</span>
-              </div></a
-            >
-            <h2 class="main_title">
-              <a
-                href="/mag/trade-gold/important-points-in-buying-molten-gold"
-                class="underline-hover-effect2"
-                >نکات کلیدی در خرید طلای آب شده چگونه طلای اصل را تشخیص دهیم؟</a
-              >
-            </h2>
-            <ul class="moreItem_moreData">
-              <div class="moreItem_moreDataContent">
-                <a class="moreItem_moreDataItem" href="/mag/@reza"
-                  ><span>توسط</span
-                  ><span class="moreItem_author2">رضا کاظمی</span></a
-                >
-              </div>
-              <div class="moreItem_moreDataContent">
-                <li class="moreItem_moreDataItem">
-                  <img
-                    alt="تاریخ انتشار مقاله"
-                    loading="lazy"
-                    width="11"
-                    height="11"
-                    decoding="async"
-                    data-nimg="1"
-                    src="{% static "img/calender.svg" %}"
-                    style="color: transparent"
-                  /><span>۱۰ شهریور ۱۴۰۳</span>
-                </li>
-              </div>
-            </ul>
-          </div>
-        </article>
+        {% endfor %}
       </div>
     </div>
   </div>
@@ -247,35 +141,36 @@
         </div>
       </div>
       <div class="main_contents_wp">
+        {% for blog in popular_blog %}
         <div class="main_content_wp">
-          <a class="main_imgContent" href="/mag/trade-gold/gold-loan"
+          <a class="main_imgContent" href="{% url "blog" blog.blogid %}"
             ><img
-              alt="شرایط اخذ وام‌ طلا چیست؟ دریافت وام بدون ضامن در ۵ دقیقه!"
+              alt="{{blog.title}}"
               loading="lazy"
               width="312"
               height="244"
               decoding="async"
               data-nimg="1"
-              src="media/img/loan.png"
+              src="{{blog.blog_image.url}}"
               style="color: transparent"
               class="efect-img"
           /></a>
           <div class="main_contentTexts">
             <a class="main_categoryLink" href="/mag/trade-gold"
-              >آموزش خرید و فروش طلا</a
+              >{{blog.subject}}</a
             >
             <h3 class="main_title__LBSV_">
               <a
-                href="/mag/trade-gold/gold-loan"
+                href="{% url "blog" blog.blogid %}"
                 class="underline-hover-effect2"
-                >شرایط اخذ وام‌ طلا چیست؟ دریافت وام بدون ضامن در ۵ دقیقه!</a
+                >{{blog.title}}</a
               >
             </h3>
             <ul class="moreItem_moreData__LR8RV">
               <div class="moreItem_moreDataContent__dF8j_">
                 <a class="moreItem_moreDataItem__pSgI3" href="/mag/@marzieh"
                   ><span>توسط</span
-                  ><span class="moreItem_author2">مرضیه کوهشاری</span></a
+                  ><span class="moreItem_author2">{{blog.author.name}}</span></a
                 >
               </div>
               <div class="moreItem_moreDataContent__dF8j_">
@@ -289,212 +184,13 @@
                     data-nimg="1"
                     src="{% static "img/calender.svg" %}"
                     style="color: transparent"
-                  /><span>۲۲ مرداد ۱۴۰۳</span>
+                  /><span>{{blog.day}} {{blog.month}} {{blog.year}}</span>
                 </li>
               </div>
             </ul>
           </div>
         </div>
-        <div class="main_content_wp">
-          <a
-            class="main_imgContent"
-            href="/mag/trade-gold/introducing-the-talasea"
-            ><img
-              alt="معرفی وب‌سایت طلاسی و خدمات آن"
-              loading="lazy"
-              width="312"
-              height="244"
-              decoding="async"
-              data-nimg="1"
-              src="media/img/1707462158780_1731909_577.webp"
-              style="color: transparent"
-              class="efect-img"
-          /></a>
-          <div class="main_contentTexts__rqkM0">
-            <a class="main_categoryLink" href="/mag/trade-gold"
-              >آموزش خرید و فروش طلا</a
-            >
-            <h3 class="main_title__LBSV_">
-              <a
-                href="/mag/trade-gold/introducing-the-talasea"
-                class="underline-hover-effect2"
-                >معرفی وب‌سایت طلاسی و خدمات آن</a
-              >
-            </h3>
-            <ul class="moreItem_moreData__LR8RV">
-              <div class="moreItem_moreDataContent__dF8j_">
-                <a class="moreItem_moreDataItem__pSgI3" href="/mag/@marzieh"
-                  ><span>توسط</span
-                  ><span class="moreItem_author2">مرضیه کوهشاری</span></a
-                >
-              </div>
-              <div class="moreItem_moreDataContent__dF8j_">
-                <li class="moreItem_moreDataItem__pSgI3">
-                  <img
-                    alt="تاریخ انتشار مقاله"
-                    loading="lazy"
-                    width="11"
-                    height="11"
-                    decoding="async"
-                    data-nimg="1"
-                    src="{% static "img/calender.svg" %}"
-                    style="color: transparent"
-                  /><span>۲۳ مرداد ۱۴۰۳</span>
-                </li>
-              </div>
-            </ul>
-          </div>
-        </div>
-        <div class="main_content_wp">
-          <a
-            class="main_imgContent"
-            href="/mag/facts/how-can-we-detect-gold-from-rocks-soil"
-            ><img
-              alt="روش‌های تشخیص طلا در سنگ و خاک - هر آنچه که باید درباره خاک طلا بدانید"
-              loading="lazy"
-              width="312"
-              height="244"
-              decoding="async"
-              data-nimg="1"
-              src="media/img/1712038680657_how-can-we-detect-gold-from-rocks-soil.webp"
-              class="efect-img"
-              style="color: transparent"
-          /></a>
-          <div class="main_contentTexts__rqkM0">
-            <a class="main_categoryLink" href="/mag/facts">دانستنی‌های طلا</a>
-            <h3 class="main_title__LBSV_">
-              <a
-                href="/mag/facts/how-can-we-detect-gold-from-rocks-soil"
-                class="underline-hover-effect2"
-                >روش‌های تشخیص طلا در سنگ و خاک - هر آنچه که باید درباره خاک طلا
-                بدانید</a
-              >
-            </h3>
-            <ul class="moreItem_moreData__LR8RV">
-              <div class="moreItem_moreDataContent__dF8j_">
-                <a class="moreItem_moreDataItem__pSgI3" href="/mag/@rahimi"
-                  ><span>توسط</span
-                  ><span class="moreItem_author2">مریم رحیمی مقدم</span></a
-                >
-              </div>
-              <div class="moreItem_moreDataContent__dF8j_">
-                <li class="moreItem_moreDataItem__pSgI3">
-                  <img
-                    alt="تاریخ انتشار مقاله"
-                    loading="lazy"
-                    width="11"
-                    height="11"
-                    decoding="async"
-                    data-nimg="1"
-                    src="{% static "img/calender.svg" %}"
-                    style="color: transparent"
-                  /><span>۳۱ مرداد ۱۴۰۳</span>
-                </li>
-              </div>
-            </ul>
-          </div>
-        </div>
-        <div class="main_content_wp">
-          <a
-            class="main_imgContent"
-            href="/mag/trade-gold/best-gold-coin-for-investment"
-            ><img
-              alt="بهترین سکه برای سرمایه گذاری (این سکه زمان فروش کاهش قیمت ندارد)"
-              loading="lazy"
-              width="312"
-              height="244"
-              decoding="async"
-              data-nimg="1"
-              src="media/img/best-coin.png"
-              class="efect-img"
-              style="color: transparent"
-          /></a>
-          <div class="main_contentTexts__rqkM0">
-            <a class="main_categoryLink" href="/mag/trade-gold"
-              >آموزش خرید و فروش طلا</a
-            >
-            <h3 class="main_title__LBSV_">
-              <a
-                href="/mag/trade-gold/best-gold-coin-for-investment"
-                class="underline-hover-effect2"
-                >بهترین سکه برای سرمایه گذاری (این سکه زمان فروش کاهش قیمت
-                ندارد)</a
-              >
-            </h3>
-            <ul class="moreItem_moreData__LR8RV">
-              <div class="moreItem_moreDataContent__dF8j_">
-                <a class="moreItem_moreDataItem__pSgI3" href="/mag/@marzieh"
-                  ><span>توسط</span
-                  ><span class="moreItem_author2">مرضیه کوهشاری</span></a
-                >
-              </div>
-              <div class="moreItem_moreDataContent__dF8j_">
-                <li class="moreItem_moreDataItem__pSgI3">
-                  <img
-                    alt="تاریخ انتشار مقاله"
-                    loading="lazy"
-                    width="11"
-                    height="11"
-                    decoding="async"
-                    data-nimg="1"
-                    src="{% static "img/calender.svg" %}"
-                    style="color: transparent"
-                  /><span>۲۲ مرداد ۱۴۰۳</span>
-                </li>
-              </div>
-            </ul>
-          </div>
-        </div>
-        <div class="main_content_wp">
-          <a
-            class="main_imgContent"
-            href="/mag/trade-gold/home-methods-of-detecting-gold-grade"
-            ><img
-              alt="عیار طلا چیست و چگونه آن را تشخیص دهیم؟ ۴ روش خانگی و تخصصی!"
-              loading="lazy"
-              width="312"
-              height="244"
-              decoding="async"
-              data-nimg="1"
-              src="media/img/khoolos.png"
-              class="efect-img"
-              style="color: transparent"
-          /></a>
-          <div class="main_contentTexts__rqkM0">
-            <a class="main_categoryLink" href="/mag/trade-gold"
-              >آموزش خرید و فروش طلا</a
-            >
-            <h3 class="main_title__LBSV_">
-              <a
-                href="/mag/trade-gold/home-methods-of-detecting-gold-grade"
-                class="underline-hover-effect2"
-                >عیار طلا چیست و چگونه آن را تشخیص دهیم؟ ۴ روش خانگی و تخصصی!</a
-              >
-            </h3>
-            <ul class="moreItem_moreData__LR8RV">
-              <div class="moreItem_moreDataContent__dF8j_">
-                <a class="moreItem_moreDataItem__pSgI3" href="/mag/@reza"
-                  ><span>توسط</span
-                  ><span class="moreItem_author2">رضا کاظمی</span></a
-                >
-              </div>
-              <div class="moreItem_moreDataContent__dF8j_">
-                <li class="moreItem_moreDataItem__pSgI3">
-                  <img
-                    alt="تاریخ انتشار مقاله"
-                    loading="lazy"
-                    width="11"
-                    height="11"
-                    decoding="async"
-                    data-nimg="1"
-                    src="{% static "img/calender.svg" %}"
-                    style="color: transparent"
-                  /><span>۲۴ مرداد ۱۴۰۳</span>
-                </li>
-              </div>
-            </ul>
-          </div>
-        </div>
+        {% endfor %}
       </div>
     </div>
   </div>
@@ -513,31 +209,32 @@
       <div class="allArticles_recentArticlesBody">
         <div class="allArticles_allArticles">
           <div class="allArticles_allArticlesContent">
+            {% for blog in latest %}
             <div class="allArticles_contentContainer__BqTNO">
               <article class="allArticles_content__F1GyD">
                 <a
                   class="allArticles_imgContent__vW18z"
-                  href="/mag/facts/lutus-gold-jewellery"
+                  href="{% url "blog" blog.blogid %}"
                   ><img
-                    alt="نماد لوتوس در طلا و جواهرات به چه معناست؟"
+                    alt="{{blog.title}}"
                     loading="lazy"
                     width="312"
                     height="244"
                     decoding="async"
                     data-nimg="1"
                     class="efect-img"
-                    src="media/img/1703689465824_compressed_luxurious_gold_jewelry_lotus_logo.webp"
+                    src="{{blog.blog_image.url}}"
                     style="color: transparent"
                 /></a>
                 <div class="allArticles_contentTexts__IJt4L">
                   <a class="main_categoryLink" href="/mag/facts"
-                    >دانستنی‌های طلا</a
+                    >{{blog.subject}}</a
                   >
                   <h2 class="main_title__LBSV_">
                     <a
-                      href="/mag/facts/lutus-gold-jewellery"
+                      href="{% url "blog" blog.blogid %}"
                       class="underline-hover-effect2"
-                      >نماد لوتوس در طلا و جواهرات به چه معناست؟</a
+                      >{{blog.title}}</a
                     >
                   </h2>
                   <ul class="moreItem_moreData">
@@ -546,7 +243,7 @@
                         class="moreItem_moreDataItem__pSgI3"
                         href="/mag/@marzieh"
                         ><span>توسط</span
-                        ><span class="moreItem_author2">مرضیه کوهشاری</span></a
+                        ><span class="moreItem_author2">{{blog.author.name}}</span></a
                       >
                     </div>
                     <div class="moreItem_moreDataContent__dF8j_">
@@ -560,611 +257,14 @@
                           data-nimg="1"
                           src="{% static "img/calender.svg" %}"
                           style="color: transparent"
-                        /><span>۲۱ شهریور ۱۴۰۳</span>
+                        /><span>{{blog.day}} {{blog.month}} {{blog.year}}</span>
                       </li>
                     </div>
                   </ul>
                 </div>
               </article>
             </div>
-            <div class="allArticles_contentContainer__BqTNO">
-              <article class="allArticles_content__F1GyD">
-                <a
-                  class="allArticles_imgContent__vW18z"
-                  href="/mag/facts/lutus-gold-jewellery"
-                  ><img
-                    alt="نماد لوتوس در طلا و جواهرات به چه معناست؟"
-                    loading="lazy"
-                    width="312"
-                    height="244"
-                    decoding="async"
-                    data-nimg="1"
-                    class="efect-img"
-                    src="media/img/1703689465824_compressed_luxurious_gold_jewelry_lotus_logo.webp"
-                    style="color: transparent"
-                /></a>
-                <div class="allArticles_contentTexts__IJt4L">
-                  <a class="main_categoryLink" href="/mag/facts"
-                    >دانستنی‌های طلا</a
-                  >
-                  <h2 class="main_title__LBSV_">
-                    <a
-                      href="/mag/facts/lutus-gold-jewellery"
-                      class="underline-hover-effect2"
-                      >نماد لوتوس در طلا و جواهرات به چه معناست؟</a
-                    >
-                  </h2>
-                  <ul class="moreItem_moreData">
-                    <div class="moreItem_moreDataContent__dF8j_">
-                      <a
-                        class="moreItem_moreDataItem__pSgI3"
-                        href="/mag/@marzieh"
-                        ><span>توسط</span
-                        ><span class="moreItem_author2">مرضیه کوهشاری</span></a
-                      >
-                    </div>
-                    <div class="moreItem_moreDataContent__dF8j_">
-                      <li class="moreItem_moreDataItem__pSgI3">
-                        <img
-                          alt="تاریخ انتشار مقاله"
-                          loading="lazy"
-                          width="11"
-                          height="11"
-                          decoding="async"
-                          data-nimg="1"
-                          src="{% static "img/calender.svg" %}"
-                          style="color: transparent"
-                        /><span>۲۱ شهریور ۱۴۰۳</span>
-                      </li>
-                    </div>
-                  </ul>
-                </div>
-              </article>
-            </div>
-            <div class="allArticles_contentContainer__BqTNO">
-              <article class="allArticles_content__F1GyD">
-                <a
-                  class="allArticles_imgContent__vW18z"
-                  href="/mag/facts/lutus-gold-jewellery"
-                  ><img
-                    alt="نماد لوتوس در طلا و جواهرات به چه معناست؟"
-                    loading="lazy"
-                    width="312"
-                    height="244"
-                    decoding="async"
-                    data-nimg="1"
-                    class="efect-img"
-                    src="media/img/1703689465824_compressed_luxurious_gold_jewelry_lotus_logo.webp"
-                    style="color: transparent"
-                /></a>
-                <div class="allArticles_contentTexts__IJt4L">
-                  <a class="main_categoryLink" href="/mag/facts"
-                    >دانستنی‌های طلا</a
-                  >
-                  <h2 class="main_title__LBSV_">
-                    <a
-                      href="/mag/facts/lutus-gold-jewellery"
-                      class="underline-hover-effect2"
-                      >نماد لوتوس در طلا و جواهرات به چه معناست؟</a
-                    >
-                  </h2>
-                  <ul class="moreItem_moreData">
-                    <div class="moreItem_moreDataContent__dF8j_">
-                      <a
-                        class="moreItem_moreDataItem__pSgI3"
-                        href="/mag/@marzieh"
-                        ><span>توسط</span
-                        ><span class="moreItem_author2">مرضیه کوهشاری</span></a
-                      >
-                    </div>
-                    <div class="moreItem_moreDataContent__dF8j_">
-                      <li class="moreItem_moreDataItem__pSgI3">
-                        <img
-                          alt="تاریخ انتشار مقاله"
-                          loading="lazy"
-                          width="11"
-                          height="11"
-                          decoding="async"
-                          data-nimg="1"
-                          src="{% static "img/calender.svg" %}"
-                          style="color: transparent"
-                        /><span>۲۱ شهریور ۱۴۰۳</span>
-                      </li>
-                    </div>
-                  </ul>
-                </div>
-              </article>
-            </div>
-            <div class="allArticles_contentContainer__BqTNO">
-              <article class="allArticles_content__F1GyD">
-                <a
-                  class="allArticles_imgContent__vW18z"
-                  href="/mag/facts/lutus-gold-jewellery"
-                  ><img
-                    alt="نماد لوتوس در طلا و جواهرات به چه معناست؟"
-                    loading="lazy"
-                    width="312"
-                    height="244"
-                    decoding="async"
-                    data-nimg="1"
-                    class="efect-img"
-                    src="media/img/1703689465824_compressed_luxurious_gold_jewelry_lotus_logo.webp"
-                    style="color: transparent"
-                /></a>
-                <div class="allArticles_contentTexts__IJt4L">
-                  <a class="main_categoryLink" href="/mag/facts"
-                    >دانستنی‌های طلا</a
-                  >
-                  <h2 class="main_title__LBSV_">
-                    <a
-                      href="/mag/facts/lutus-gold-jewellery"
-                      class="underline-hover-effect2"
-                      >نماد لوتوس در طلا و جواهرات به چه معناست؟</a
-                    >
-                  </h2>
-                  <ul class="moreItem_moreData">
-                    <div class="moreItem_moreDataContent__dF8j_">
-                      <a
-                        class="moreItem_moreDataItem__pSgI3"
-                        href="/mag/@marzieh"
-                        ><span>توسط</span
-                        ><span class="moreItem_author2">مرضیه کوهشاری</span></a
-                      >
-                    </div>
-                    <div class="moreItem_moreDataContent__dF8j_">
-                      <li class="moreItem_moreDataItem__pSgI3">
-                        <img
-                          alt="تاریخ انتشار مقاله"
-                          loading="lazy"
-                          width="11"
-                          height="11"
-                          decoding="async"
-                          data-nimg="1"
-                          src="{% static "img/calender.svg" %}"
-                          style="color: transparent"
-                        /><span>۲۱ شهریور ۱۴۰۳</span>
-                      </li>
-                    </div>
-                  </ul>
-                </div>
-              </article>
-            </div>
-            <div class="allArticles_contentContainer__BqTNO">
-              <article class="allArticles_content__F1GyD">
-                <a
-                  class="allArticles_imgContent__vW18z"
-                  href="/mag/facts/lutus-gold-jewellery"
-                  ><img
-                    alt="نماد لوتوس در طلا و جواهرات به چه معناست؟"
-                    loading="lazy"
-                    width="312"
-                    height="244"
-                    decoding="async"
-                    data-nimg="1"
-                    class="efect-img"
-                    src="media/img/1703689465824_compressed_luxurious_gold_jewelry_lotus_logo.webp"
-                    style="color: transparent"
-                /></a>
-                <div class="allArticles_contentTexts__IJt4L">
-                  <a class="main_categoryLink" href="/mag/facts"
-                    >دانستنی‌های طلا</a
-                  >
-                  <h2 class="main_title__LBSV_">
-                    <a
-                      href="/mag/facts/lutus-gold-jewellery"
-                      class="underline-hover-effect2"
-                      >نماد لوتوس در طلا و جواهرات به چه معناست؟</a
-                    >
-                  </h2>
-                  <ul class="moreItem_moreData">
-                    <div class="moreItem_moreDataContent__dF8j_">
-                      <a
-                        class="moreItem_moreDataItem__pSgI3"
-                        href="/mag/@marzieh"
-                        ><span>توسط</span
-                        ><span class="moreItem_author2">مرضیه کوهشاری</span></a
-                      >
-                    </div>
-                    <div class="moreItem_moreDataContent__dF8j_">
-                      <li class="moreItem_moreDataItem__pSgI3">
-                        <img
-                          alt="تاریخ انتشار مقاله"
-                          loading="lazy"
-                          width="11"
-                          height="11"
-                          decoding="async"
-                          data-nimg="1"
-                          src="{% static "img/calender.svg" %}"
-                          style="color: transparent"
-                        /><span>۲۱ شهریور ۱۴۰۳</span>
-                      </li>
-                    </div>
-                  </ul>
-                </div>
-              </article>
-            </div>
-            <div class="allArticles_contentContainer__BqTNO">
-              <article class="allArticles_content__F1GyD">
-                <a
-                  class="allArticles_imgContent__vW18z"
-                  href="/mag/facts/lutus-gold-jewellery"
-                  ><img
-                    alt="نماد لوتوس در طلا و جواهرات به چه معناست؟"
-                    loading="lazy"
-                    width="312"
-                    height="244"
-                    decoding="async"
-                    data-nimg="1"
-                    class="efect-img"
-                    src="media/img/1703689465824_compressed_luxurious_gold_jewelry_lotus_logo.webp"
-                    style="color: transparent"
-                /></a>
-                <div class="allArticles_contentTexts__IJt4L">
-                  <a class="main_categoryLink" href="/mag/facts"
-                    >دانستنی‌های طلا</a
-                  >
-                  <h2 class="main_title__LBSV_">
-                    <a
-                      href="/mag/facts/lutus-gold-jewellery"
-                      class="underline-hover-effect2"
-                      >نماد لوتوس در طلا و جواهرات به چه معناست؟</a
-                    >
-                  </h2>
-                  <ul class="moreItem_moreData">
-                    <div class="moreItem_moreDataContent__dF8j_">
-                      <a
-                        class="moreItem_moreDataItem__pSgI3"
-                        href="/mag/@marzieh"
-                        ><span>توسط</span
-                        ><span class="moreItem_author2">مرضیه کوهشاری</span></a
-                      >
-                    </div>
-                    <div class="moreItem_moreDataContent__dF8j_">
-                      <li class="moreItem_moreDataItem__pSgI3">
-                        <img
-                          alt="تاریخ انتشار مقاله"
-                          loading="lazy"
-                          width="11"
-                          height="11"
-                          decoding="async"
-                          data-nimg="1"
-                          src="{% static "img/calender.svg" %}"
-                          style="color: transparent"
-                        /><span>۲۱ شهریور ۱۴۰۳</span>
-                      </li>
-                    </div>
-                  </ul>
-                </div>
-              </article>
-            </div>
-            <div class="allArticles_contentContainer__BqTNO">
-              <article class="allArticles_content__F1GyD">
-                <a
-                  class="allArticles_imgContent__vW18z"
-                  href="/mag/facts/lutus-gold-jewellery"
-                  ><img
-                    alt="نماد لوتوس در طلا و جواهرات به چه معناست؟"
-                    loading="lazy"
-                    width="312"
-                    height="244"
-                    decoding="async"
-                    data-nimg="1"
-                    class="efect-img"
-                    src="media/img/1703689465824_compressed_luxurious_gold_jewelry_lotus_logo.webp"
-                    style="color: transparent"
-                /></a>
-                <div class="allArticles_contentTexts__IJt4L">
-                  <a class="main_categoryLink" href="/mag/facts"
-                    >دانستنی‌های طلا</a
-                  >
-                  <h2 class="main_title__LBSV_">
-                    <a
-                      href="/mag/facts/lutus-gold-jewellery"
-                      class="underline-hover-effect2"
-                      >نماد لوتوس در طلا و جواهرات به چه معناست؟</a
-                    >
-                  </h2>
-                  <ul class="moreItem_moreData">
-                    <div class="moreItem_moreDataContent__dF8j_">
-                      <a
-                        class="moreItem_moreDataItem__pSgI3"
-                        href="/mag/@marzieh"
-                        ><span>توسط</span
-                        ><span class="moreItem_author2">مرضیه کوهشاری</span></a
-                      >
-                    </div>
-                    <div class="moreItem_moreDataContent__dF8j_">
-                      <li class="moreItem_moreDataItem__pSgI3">
-                        <img
-                          alt="تاریخ انتشار مقاله"
-                          loading="lazy"
-                          width="11"
-                          height="11"
-                          decoding="async"
-                          data-nimg="1"
-                          src="{% static "img/calender.svg" %}"
-                          style="color: transparent"
-                        /><span>۲۱ شهریور ۱۴۰۳</span>
-                      </li>
-                    </div>
-                  </ul>
-                </div>
-              </article>
-            </div>
-            <div class="allArticles_contentContainer__BqTNO">
-              <article class="allArticles_content__F1GyD">
-                <a
-                  class="allArticles_imgContent__vW18z"
-                  href="/mag/facts/lutus-gold-jewellery"
-                  ><img
-                    alt="نماد لوتوس در طلا و جواهرات به چه معناست؟"
-                    loading="lazy"
-                    width="312"
-                    height="244"
-                    decoding="async"
-                    data-nimg="1"
-                    class="efect-img"
-                    src="media/img/1703689465824_compressed_luxurious_gold_jewelry_lotus_logo.webp"
-                    style="color: transparent"
-                /></a>
-                <div class="allArticles_contentTexts__IJt4L">
-                  <a class="main_categoryLink" href="/mag/facts"
-                    >دانستنی‌های طلا</a
-                  >
-                  <h2 class="main_title__LBSV_">
-                    <a
-                      href="/mag/facts/lutus-gold-jewellery"
-                      class="underline-hover-effect2"
-                      >نماد لوتوس در طلا و جواهرات به چه معناست؟</a
-                    >
-                  </h2>
-                  <ul class="moreItem_moreData">
-                    <div class="moreItem_moreDataContent__dF8j_">
-                      <a
-                        class="moreItem_moreDataItem__pSgI3"
-                        href="/mag/@marzieh"
-                        ><span>توسط</span
-                        ><span class="moreItem_author2">مرضیه کوهشاری</span></a
-                      >
-                    </div>
-                    <div class="moreItem_moreDataContent__dF8j_">
-                      <li class="moreItem_moreDataItem__pSgI3">
-                        <img
-                          alt="تاریخ انتشار مقاله"
-                          loading="lazy"
-                          width="11"
-                          height="11"
-                          decoding="async"
-                          data-nimg="1"
-                          src="{% static "img/calender.svg" %}"
-                          style="color: transparent"
-                        /><span>۲۱ شهریور ۱۴۰۳</span>
-                      </li>
-                    </div>
-                  </ul>
-                </div>
-              </article>
-            </div>
-            <div class="allArticles_contentContainer__BqTNO">
-              <article class="allArticles_content__F1GyD">
-                <a
-                  class="allArticles_imgContent__vW18z"
-                  href="/mag/facts/lutus-gold-jewellery"
-                  ><img
-                    alt="نماد لوتوس در طلا و جواهرات به چه معناست؟"
-                    loading="lazy"
-                    width="312"
-                    height="244"
-                    decoding="async"
-                    data-nimg="1"
-                    class="efect-img"
-                    src="media/img/1703689465824_compressed_luxurious_gold_jewelry_lotus_logo.webp"
-                    style="color: transparent"
-                /></a>
-                <div class="allArticles_contentTexts__IJt4L">
-                  <a class="main_categoryLink" href="/mag/facts"
-                    >دانستنی‌های طلا</a
-                  >
-                  <h2 class="main_title__LBSV_">
-                    <a
-                      href="/mag/facts/lutus-gold-jewellery"
-                      class="underline-hover-effect2"
-                      >نماد لوتوس در طلا و جواهرات به چه معناست؟</a
-                    >
-                  </h2>
-                  <ul class="moreItem_moreData">
-                    <div class="moreItem_moreDataContent__dF8j_">
-                      <a
-                        class="moreItem_moreDataItem__pSgI3"
-                        href="/mag/@marzieh"
-                        ><span>توسط</span
-                        ><span class="moreItem_author2">مرضیه کوهشاری</span></a
-                      >
-                    </div>
-                    <div class="moreItem_moreDataContent__dF8j_">
-                      <li class="moreItem_moreDataItem__pSgI3">
-                        <img
-                          alt="تاریخ انتشار مقاله"
-                          loading="lazy"
-                          width="11"
-                          height="11"
-                          decoding="async"
-                          data-nimg="1"
-                          src="{% static "img/calender.svg" %}"
-                          style="color: transparent"
-                        /><span>۲۱ شهریور ۱۴۰۳</span>
-                      </li>
-                    </div>
-                  </ul>
-                </div>
-              </article>
-            </div>
-            <div class="allArticles_contentContainer__BqTNO">
-              <article class="allArticles_content__F1GyD">
-                <a
-                  class="allArticles_imgContent__vW18z"
-                  href="/mag/facts/lutus-gold-jewellery"
-                  ><img
-                    alt="نماد لوتوس در طلا و جواهرات به چه معناست؟"
-                    loading="lazy"
-                    width="312"
-                    height="244"
-                    decoding="async"
-                    data-nimg="1"
-                    class="efect-img"
-                    src="media/img/1703689465824_compressed_luxurious_gold_jewelry_lotus_logo.webp"
-                    style="color: transparent"
-                /></a>
-                <div class="allArticles_contentTexts__IJt4L">
-                  <a class="main_categoryLink" href="/mag/facts"
-                    >دانستنی‌های طلا</a
-                  >
-                  <h2 class="main_title__LBSV_">
-                    <a
-                      href="/mag/facts/lutus-gold-jewellery"
-                      class="underline-hover-effect2"
-                      >نماد لوتوس در طلا و جواهرات به چه معناست؟</a
-                    >
-                  </h2>
-                  <ul class="moreItem_moreData">
-                    <div class="moreItem_moreDataContent__dF8j_">
-                      <a
-                        class="moreItem_moreDataItem__pSgI3"
-                        href="/mag/@marzieh"
-                        ><span>توسط</span
-                        ><span class="moreItem_author2">مرضیه کوهشاری</span></a
-                      >
-                    </div>
-                    <div class="moreItem_moreDataContent__dF8j_">
-                      <li class="moreItem_moreDataItem__pSgI3">
-                        <img
-                          alt="تاریخ انتشار مقاله"
-                          loading="lazy"
-                          width="11"
-                          height="11"
-                          decoding="async"
-                          data-nimg="1"
-                          src="{% static "img/calender.svg" %}"
-                          style="color: transparent"
-                        /><span>۲۱ شهریور ۱۴۰۳</span>
-                      </li>
-                    </div>
-                  </ul>
-                </div>
-              </article>
-            </div>
-            <div class="allArticles_contentContainer__BqTNO">
-              <article class="allArticles_content__F1GyD">
-                <a
-                  class="allArticles_imgContent__vW18z"
-                  href="/mag/facts/lutus-gold-jewellery"
-                  ><img
-                    alt="نماد لوتوس در طلا و جواهرات به چه معناست؟"
-                    loading="lazy"
-                    width="312"
-                    height="244"
-                    decoding="async"
-                    data-nimg="1"
-                    class="efect-img"
-                    src="media/img/1703689465824_compressed_luxurious_gold_jewelry_lotus_logo.webp"
-                    style="color: transparent"
-                /></a>
-                <div class="allArticles_contentTexts__IJt4L">
-                  <a class="main_categoryLink" href="/mag/facts"
-                    >دانستنی‌های طلا</a
-                  >
-                  <h2 class="main_title__LBSV_">
-                    <a
-                      href="/mag/facts/lutus-gold-jewellery"
-                      class="underline-hover-effect2"
-                      >نماد لوتوس در طلا و جواهرات به چه معناست؟</a
-                    >
-                  </h2>
-                  <ul class="moreItem_moreData">
-                    <div class="moreItem_moreDataContent__dF8j_">
-                      <a
-                        class="moreItem_moreDataItem__pSgI3"
-                        href="/mag/@marzieh"
-                        ><span>توسط</span
-                        ><span class="moreItem_author2">مرضیه کوهشاری</span></a
-                      >
-                    </div>
-                    <div class="moreItem_moreDataContent__dF8j_">
-                      <li class="moreItem_moreDataItem__pSgI3">
-                        <img
-                          alt="تاریخ انتشار مقاله"
-                          loading="lazy"
-                          width="11"
-                          height="11"
-                          decoding="async"
-                          data-nimg="1"
-                          src="{% static "img/calender.svg" %}"
-                          style="color: transparent"
-                        /><span>۲۱ شهریور ۱۴۰۳</span>
-                      </li>
-                    </div>
-                  </ul>
-                </div>
-              </article>
-            </div>
-            <div class="allArticles_contentContainer__BqTNO">
-              <article class="allArticles_content__F1GyD">
-                <a
-                  class="allArticles_imgContent__vW18z"
-                  href="/mag/facts/lutus-gold-jewellery"
-                  ><img
-                    alt="نماد لوتوس در طلا و جواهرات به چه معناست؟"
-                    loading="lazy"
-                    width="312"
-                    height="244"
-                    decoding="async"
-                    data-nimg="1"
-                    class="efect-img"
-                    src="media/img/1703689465824_compressed_luxurious_gold_jewelry_lotus_logo.webp"
-                    style="color: transparent"
-                /></a>
-                <div class="allArticles_contentTexts__IJt4L">
-                  <a class="main_categoryLink" href="/mag/facts"
-                    >دانستنی‌های طلا</a
-                  >
-                  <h2 class="main_title__LBSV_">
-                    <a
-                      href="/mag/facts/lutus-gold-jewellery"
-                      class="underline-hover-effect2"
-                      >نماد لوتوس در طلا و جواهرات به چه معناست؟</a
-                    >
-                  </h2>
-                  <ul class="moreItem_moreData">
-                    <div class="moreItem_moreDataContent__dF8j_">
-                      <a
-                        class="moreItem_moreDataItem__pSgI3"
-                        href="/mag/@marzieh"
-                        ><span>توسط</span
-                        ><span class="moreItem_author2">مرضیه کوهشاری</span></a
-                      >
-                    </div>
-                    <div class="moreItem_moreDataContent__dF8j_">
-                      <li class="moreItem_moreDataItem__pSgI3">
-                        <img
-                          alt="تاریخ انتشار مقاله"
-                          loading="lazy"
-                          width="11"
-                          height="11"
-                          decoding="async"
-                          data-nimg="1"
-                          src="{% static "img/calender.svg" %}"
-                          style="color: transparent"
-                        /><span>۲۱ شهریور ۱۴۰۳</span>
-                      </li>
-                    </div>
-                  </ul>
-                </div>
-              </article>
-            </div>
-          </div>
-          <div class="allArticles_allArticlesLink">
-            <div class="allArticles_rightLink"></div>
-            <a href="/mag/articles">مشاهده عناوین بیشتر</a>
+            {% endfor %}
           </div>
         </div>
         <div class="allArticles_leftData">
@@ -1174,39 +274,40 @@
             </div>
             <a
               class="sideItem_firstItem__GxelP"
-              href="/mag/facts/what-is-a-gold-bubble"
+              href="{% url "blog" best_rated.blogid %}"
               ><div class="sideItem_firstItemImg__JFAeB">
                 <img
-                  alt="حباب طلا چیست؟ آموزش نحوه محاسبه حباب طلا"
+                  alt="{{best_rated.title}}"
                   loading="lazy"
                   width="100"
                   height="100"
                   decoding="async"
                   data-nimg="1"
-                  src="media/img/1718872914582_what-is-a-gold-bubble.webp"
+                  src="{{best_rated.blog_image.url}}"
                   style="color: transparent"
                 />
               </div>
-              <h3>حباب طلا چیست؟ آموزش نحوه محاسبه حباب طلا</h3></a
+              <h3>{{best_rated.title}}</h3></a
             >
+            {% for best_rateds in best_rateds %}
             <a
               class="sideItem_insideItem__1CXAr"
-              href="/mag/stock/gold-deposit-certificate"
+              href="{% url "blog" best_rateds.blogid %}"
               ><div class="sideItem_sideItemImg__I3bBB">
                 <img
-                  alt="گواهی سپرده طلا چیست؟ ویژگی‌های آن و نحوه خرید گواهی طلا"
+                  alt="{{best_rateds.title}}"
                   loading="lazy"
                   width="60"
                   height="60"
                   decoding="async"
                   data-nimg="1"
-                  src="media/img/certification.png"
+                  src="{{best_rateds.blog_image.url}}"
                   style="color: transparent"
                 />
               </div>
               <div class="sideItem_sideTexts">
                 <h3>
-                  گواهی سپرده طلا چیست؟ ویژگی‌های آن و نحوه خرید گواهی طلا
+                  {{best_rateds.title}}
                 </h3>
                 <ul class="moreItem_moreData moreItem_onBanner__6fODc">
                   <div class="moreItem_moreDataContent__dF8j_">
@@ -1220,308 +321,13 @@
                         data-nimg="1"
                         src="{% static "img/calender.svg" %}"
                         style="color: transparent"
-                      /><span>۱۹ شهریور ۱۴۰۳</span>
+                      /><span>{{best_rateds.day}} {{best_rateds.month}} {{best_rateds.year}}</span>
                     </li>
                   </div>
                 </ul>
               </div></a
             >
-            <a
-              class="sideItem_insideItem__1CXAr"
-              href="/mag/stock/gold-deposit-certificate"
-              ><div class="sideItem_sideItemImg__I3bBB">
-                <img
-                  alt="گواهی سپرده طلا چیست؟ ویژگی‌های آن و نحوه خرید گواهی طلا"
-                  loading="lazy"
-                  width="60"
-                  height="60"
-                  decoding="async"
-                  data-nimg="1"
-                  src="media/img/certification.png"
-                  style="color: transparent"
-                />
-              </div>
-              <div class="sideItem_sideTexts">
-                <h3>
-                  گواهی سپرده طلا چیست؟ ویژگی‌های آن و نحوه خرید گواهی طلا
-                </h3>
-                <ul class="moreItem_moreData moreItem_onBanner__6fODc">
-                  <div class="moreItem_moreDataContent__dF8j_">
-                    <li class="moreItem_moreDataItem__pSgI3">
-                      <img
-                        alt="تاریخ انتشار مقاله"
-                        loading="lazy"
-                        width="11"
-                        height="11"
-                        decoding="async"
-                        data-nimg="1"
-                        src="{% static "img/calender.svg" %}"
-                        style="color: transparent"
-                      /><span>۱۹ شهریور ۱۴۰۳</span>
-                    </li>
-                  </div>
-                </ul>
-              </div></a
-            >
-            <a
-              class="sideItem_insideItem__1CXAr"
-              href="/mag/stock/gold-deposit-certificate"
-              ><div class="sideItem_sideItemImg__I3bBB">
-                <img
-                  alt="گواهی سپرده طلا چیست؟ ویژگی‌های آن و نحوه خرید گواهی طلا"
-                  loading="lazy"
-                  width="60"
-                  height="60"
-                  decoding="async"
-                  data-nimg="1"
-                  src="media/img/certification.png"
-                  style="color: transparent"
-                />
-              </div>
-              <div class="sideItem_sideTexts">
-                <h3>
-                  گواهی سپرده طلا چیست؟ ویژگی‌های آن و نحوه خرید گواهی طلا
-                </h3>
-                <ul class="moreItem_moreData moreItem_onBanner__6fODc">
-                  <div class="moreItem_moreDataContent__dF8j_">
-                    <li class="moreItem_moreDataItem__pSgI3">
-                      <img
-                        alt="تاریخ انتشار مقاله"
-                        loading="lazy"
-                        width="11"
-                        height="11"
-                        decoding="async"
-                        data-nimg="1"
-                        src="{% static "img/calender.svg" %}"
-                        style="color: transparent"
-                      /><span>۱۹ شهریور ۱۴۰۳</span>
-                    </li>
-                  </div>
-                </ul>
-              </div></a
-            >
-            <a
-              class="sideItem_insideItem__1CXAr"
-              href="/mag/stock/gold-deposit-certificate"
-              ><div class="sideItem_sideItemImg__I3bBB">
-                <img
-                  alt="گواهی سپرده طلا چیست؟ ویژگی‌های آن و نحوه خرید گواهی طلا"
-                  loading="lazy"
-                  width="60"
-                  height="60"
-                  decoding="async"
-                  data-nimg="1"
-                  src="media/img/certification.png"
-                  style="color: transparent"
-                />
-              </div>
-              <div class="sideItem_sideTexts">
-                <h3>
-                  گواهی سپرده طلا چیست؟ ویژگی‌های آن و نحوه خرید گواهی طلا
-                </h3>
-                <ul class="moreItem_moreData moreItem_onBanner__6fODc">
-                  <div class="moreItem_moreDataContent__dF8j_">
-                    <li class="moreItem_moreDataItem__pSgI3">
-                      <img
-                        alt="تاریخ انتشار مقاله"
-                        loading="lazy"
-                        width="11"
-                        height="11"
-                        decoding="async"
-                        data-nimg="1"
-                        src="{% static "img/calender.svg" %}"
-                        style="color: transparent"
-                      /><span>۱۹ شهریور ۱۴۰۳</span>
-                    </li>
-                  </div>
-                </ul>
-              </div></a
-            >
-            <a
-              class="sideItem_insideItem__1CXAr"
-              href="/mag/stock/gold-deposit-certificate"
-              ><div class="sideItem_sideItemImg__I3bBB">
-                <img
-                  alt="گواهی سپرده طلا چیست؟ ویژگی‌های آن و نحوه خرید گواهی طلا"
-                  loading="lazy"
-                  width="60"
-                  height="60"
-                  decoding="async"
-                  data-nimg="1"
-                  src="media/img/certification.png"
-                  style="color: transparent"
-                />
-              </div>
-              <div class="sideItem_sideTexts">
-                <h3>
-                  گواهی سپرده طلا چیست؟ ویژگی‌های آن و نحوه خرید گواهی طلا
-                </h3>
-                <ul class="moreItem_moreData moreItem_onBanner__6fODc">
-                  <div class="moreItem_moreDataContent__dF8j_">
-                    <li class="moreItem_moreDataItem__pSgI3">
-                      <img
-                        alt="تاریخ انتشار مقاله"
-                        loading="lazy"
-                        width="11"
-                        height="11"
-                        decoding="async"
-                        data-nimg="1"
-                        src="{% static "img/calender.svg" %}"
-                        style="color: transparent"
-                      /><span>۱۹ شهریور ۱۴۰۳</span>
-                    </li>
-                  </div>
-                </ul>
-              </div></a
-            >
-            <a
-              class="sideItem_insideItem__1CXAr"
-              href="/mag/stock/gold-deposit-certificate"
-              ><div class="sideItem_sideItemImg__I3bBB">
-                <img
-                  alt="گواهی سپرده طلا چیست؟ ویژگی‌های آن و نحوه خرید گواهی طلا"
-                  loading="lazy"
-                  width="60"
-                  height="60"
-                  decoding="async"
-                  data-nimg="1"
-                  src="media/img/certification.png"
-                  style="color: transparent"
-                />
-              </div>
-              <div class="sideItem_sideTexts">
-                <h3>
-                  گواهی سپرده طلا چیست؟ ویژگی‌های آن و نحوه خرید گواهی طلا
-                </h3>
-                <ul class="moreItem_moreData moreItem_onBanner__6fODc">
-                  <div class="moreItem_moreDataContent__dF8j_">
-                    <li class="moreItem_moreDataItem__pSgI3">
-                      <img
-                        alt="تاریخ انتشار مقاله"
-                        loading="lazy"
-                        width="11"
-                        height="11"
-                        decoding="async"
-                        data-nimg="1"
-                        src="{% static "img/calender.svg" %}"
-                        style="color: transparent"
-                      /><span>۱۹ شهریور ۱۴۰۳</span>
-                    </li>
-                  </div>
-                </ul>
-              </div></a
-            >
-            <a
-              class="sideItem_insideItem__1CXAr"
-              href="/mag/stock/gold-deposit-certificate"
-              ><div class="sideItem_sideItemImg__I3bBB">
-                <img
-                  alt="گواهی سپرده طلا چیست؟ ویژگی‌های آن و نحوه خرید گواهی طلا"
-                  loading="lazy"
-                  width="60"
-                  height="60"
-                  decoding="async"
-                  data-nimg="1"
-                  src="media/img/certification.png"
-                  style="color: transparent"
-                />
-              </div>
-              <div class="sideItem_sideTexts">
-                <h3>
-                  گواهی سپرده طلا چیست؟ ویژگی‌های آن و نحوه خرید گواهی طلا
-                </h3>
-                <ul class="moreItem_moreData moreItem_onBanner__6fODc">
-                  <div class="moreItem_moreDataContent__dF8j_">
-                    <li class="moreItem_moreDataItem__pSgI3">
-                      <img
-                        alt="تاریخ انتشار مقاله"
-                        loading="lazy"
-                        width="11"
-                        height="11"
-                        decoding="async"
-                        data-nimg="1"
-                        src="{% static "img/calender.svg" %}"
-                        style="color: transparent"
-                      /><span>۱۹ شهریور ۱۴۰۳</span>
-                    </li>
-                  </div>
-                </ul>
-              </div></a
-            >
-            <a
-              class="sideItem_insideItem__1CXAr"
-              href="/mag/stock/gold-deposit-certificate"
-              ><div class="sideItem_sideItemImg__I3bBB">
-                <img
-                  alt="گواهی سپرده طلا چیست؟ ویژگی‌های آن و نحوه خرید گواهی طلا"
-                  loading="lazy"
-                  width="60"
-                  height="60"
-                  decoding="async"
-                  data-nimg="1"
-                  src="media/img/certification.png"
-                  style="color: transparent"
-                />
-              </div>
-              <div class="sideItem_sideTexts">
-                <h3>
-                  گواهی سپرده طلا چیست؟ ویژگی‌های آن و نحوه خرید گواهی طلا
-                </h3>
-                <ul class="moreItem_moreData moreItem_onBanner__6fODc">
-                  <div class="moreItem_moreDataContent__dF8j_">
-                    <li class="moreItem_moreDataItem__pSgI3">
-                      <img
-                        alt="تاریخ انتشار مقاله"
-                        loading="lazy"
-                        width="11"
-                        height="11"
-                        decoding="async"
-                        data-nimg="1"
-                        src="{% static "img/calender.svg" %}"
-                        style="color: transparent"
-                      /><span>۱۹ شهریور ۱۴۰۳</span>
-                    </li>
-                  </div>
-                </ul>
-              </div></a
-            >
-            <a
-              class="sideItem_insideItem__1CXAr"
-              href="/mag/stock/gold-deposit-certificate"
-              ><div class="sideItem_sideItemImg__I3bBB">
-                <img
-                  alt="گواهی سپرده طلا چیست؟ ویژگی‌های آن و نحوه خرید گواهی طلا"
-                  loading="lazy"
-                  width="60"
-                  height="60"
-                  decoding="async"
-                  data-nimg="1"
-                  src="media/img/certification.png"
-                  style="color: transparent"
-                />
-              </div>
-              <div class="sideItem_sideTexts">
-                <h3>
-                  گواهی سپرده طلا چیست؟ ویژگی‌های آن و نحوه خرید گواهی طلا
-                </h3>
-                <ul class="moreItem_moreData moreItem_onBanner__6fODc">
-                  <div class="moreItem_moreDataContent__dF8j_">
-                    <li class="moreItem_moreDataItem__pSgI3">
-                      <img
-                        alt="تاریخ انتشار مقاله"
-                        loading="lazy"
-                        width="11"
-                        height="11"
-                        decoding="async"
-                        data-nimg="1"
-                        src="{% static "img/calender.svg" %}"
-                        style="color: transparent"
-                      /><span>۱۹ شهریور ۱۴۰۳</span>
-                    </li>
-                  </div>
-                </ul>
-              </div></a
-            >
+            {% endfor %}
           </div>
         </div>
       </div>

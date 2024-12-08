@@ -1,6 +1,7 @@
 {% extends "base.html" %}
 {% block content %}
 {% load static %}
+{% load custom_filters %}
 <header class="header">
             <div class="main_notificationContainer">
                 <div class="main_rightContent">
@@ -606,99 +607,26 @@
     <section class="main-news">
         <h4 class="page-title main_sectionTitle">جدیدترین مقالات</h4>
         <div class="main-news-container row">
+            {% for blog in best_blogs %}
             <div class="news-box col-6 col-lg-4">
                 <div class="main_sliderItem">
-                    <a class="main_itemContent2" href="#">
-                        <img alt="مرکز مبادله ارز و طلای ایران، نحوه خرید و ثبت نام + آدرس" loading="lazy" width="390" height="215" decoding="async" data-nimg="1" style="color:transparent" src="media/img/fuckface.png">
+                    <a class="main_itemContent2" href="{% url "blog" blog.blogid %}">
+                        <img alt="{{blog.title}}" loading="lazy" width="390" height="215" decoding="async" data-nimg="1" style="color:transparent" src="{{blog.blog_image.url}}">
                         <div class="main_date">
-                            <span>۰۷ شهریور ۱۴۰۳</span>
+                            <span>{{blog.day}} {{blog.month}} {{blog.year}}</span>
                         </div>
                         <div class="main_itemTitle">
-                            <h3>مرکز مبادله ارز و طلای ایران، نحوه خرید و ثبت نام + آدرس</h3>
+                            <h3>{{blog.title}}</h3>
                         </div>
                         <div class="main_itemSubtitle">
-                            <span>دریافت ارز خدماتی برای بسیاری از متقاضیان از اهمیت بالایی برخوردار است و ممکن است سوالاتی درباره نحوه دریافت این ارز از مرکز مبادله ارز و طلای ایران مطرح شود.</span>
+                            <span>{{ blog.text|first_paragraph|safe }}
                         </div>
                     </a>
                 </div>
             </div>
-            <div class="news-box col-6 col-lg-4">
-                <div class="main_sliderItem">
-                    <a class="main_itemContent2" href="#">
-                        <img alt="مرکز مبادله ارز و طلای ایران، نحوه خرید و ثبت نام + آدرس" loading="lazy" width="390" height="215" decoding="async" data-nimg="1" style="color:transparent" src="media/img/1720253802919_fjdsfhdfsfrtwyrwher.webp">
-                        <div class="main_date">
-                            <span>۰۷ شهریور ۱۴۰۳</span>
-                        </div>
-                        <div class="main_itemTitle">
-                            <h3>طلا و عشق (داستان‌های عاشقانه‌ای که روایت می‌شوند)</h3>
-                        </div>
-                        <div class="main_itemSubtitle">
-                            <span> در این مقاله، به بررسی نقش طلا در داستان‌های عاشقانه مختلف می‌پردازیم و نشان می‌دهیم چگونه این فلز گران‌بها توانسته است در طول تاریخ به نمادی از عشق و وفاداری تبدیل شود.</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="news-box col-6 col-lg-4">
-                <div class="main_sliderItem">
-                    <a class="main_itemContent2" href="#">
-                        <img alt="مرکز مبادله ارز و طلای ایران، نحوه خرید و ثبت نام + آدرس" loading="lazy" width="390" height="215" decoding="async" data-nimg="1" style="color:transparent" src="media/img/1720254864867_jfsfhsffsdfstyurr.webp">
-                        <div class="main_date">
-                            <span>۰۷ شهریور ۱۴۰۳</span>
-                        </div><div class="main_itemTitle">
-                            <h3>معرفی 10 برند برتر جواهرات طلا در ایران</h3>
-                        </div>
-                        <div class="main_itemSubtitle">
-                            <span>در این مقاله به معرفی ۱۰ برند برتر جواهرات طلا در ایران می‌پردازیم.</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="news-box col-6 col-lg-4">
-                <div class="main_sliderItem">
-                    <a class="main_itemContent2" href="#">
-                        <img alt="مرکز مبادله ارز و طلای ایران، نحوه خرید و ثبت نام + آدرس" loading="lazy" width="390" height="215" decoding="async" data-nimg="1" style="color:transparent" src="media/img/1724843620374_navasan.webp">
-                        <div class="main_date">
-                            <span>۰۷ شهریور ۱۴۰۳</span>
-                        </div><div class="main_itemTitle">
-                            <h3>آشنایی با ابزار‌های مورد نیاز نوسانگیری طلا</h3>
-                        </div>
-                        <div class="main_itemSubtitle">
-                            <span>بازار طلا یکی از جذاب‌ترین بازارهای مالی است که با استفاده از نوسان‌گیری می‌توان به سودآوری قابل‌توجهی دست یافت. اما چگونه می‌توان در این بازار نوسان‌گیری کرد و چه نکاتی را باید مد نظر داشت؟</span>
-                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="news-box col-6 col-lg-4">
-                <div class="main_sliderItem">
-                    <a class="main_itemContent2" href="#">
-                        <img alt="مرکز مبادله ارز و طلای ایران، نحوه خرید و ثبت نام + آدرس" loading="lazy" width="390" height="215" decoding="async" data-nimg="1" style="color:transparent" src="media/img/1720338672141_comparison-of-investment-in-stock-market-and-gold.webp">
-                        <div class="main_date">
-                            <span>۰۷ شهریور ۱۴۰۳</span>
-                        </div><div class="main_itemTitle">
-                            <h3>مقایسه سرمایه‌ گذاری بورس و طلا + نکاتی که باید بدانید</h3>
-                        </div>
-                        <div class="main_itemSubtitle">
-                            <span>سرمایه گذاری در بورس بهتر است یا طلا؟ خرید طلا سود بیشتری به همراه دارد یا سهام بورس؟ مزایا و معایب سرمایه گذاری در بورس و طلا چیست؟ بازار بورس و بازار طلا دو گزینه مهم جهت سرمایه گذاری با هدف حفظ ارزش داراییها و کسب سود است.</span>                        </div>
-                    </a>
-                </div>
-            </div>
-            <div class="news-box col-6 col-lg-4">
-                <div class="main_sliderItem">
-                    <a class="main_itemContent2" href="#">
-                        <img alt="مرکز مبادله ارز و طلای ایران، نحوه خرید و ثبت نام + آدرس" loading="lazy" width="390" height="215" decoding="async" data-nimg="1" style="color:transparent" src="media/img/1720265683958_what-is-a-maskoucut-gold.webp">
-                        <div class="main_date">
-                            <span>۰۷ شهریور ۱۴۰۳</span>
-                        </div>
-                        <div class="main_itemTitle">
-                            <h3>مسکوکات طلا چیست؟ آشنایی با اصطلاح مسکوک طلا</h3>
-                        </div>
-                        <div class="main_itemSubtitle">
-                            <span>شاید شما هم در بازار طلا عبارت یا اصطلاح مسکوکات طلا را شنیدهاید اما معنی آن را نمیدانید. به سکه های طلا تولید شده توسط دولت یا بانک مرکزی هر کشور، مسکوکات طلا گفته میشود.</span>                        </div>
-                    </a>
-                </div>
-            </div>
+            {% endfor %}
         </div>
-        <div class="main_moreButton"><a class="gold-button2 btn" href="#">مطالب بیشتر</a></div>
+        <div class="main_moreButton"><a class="gold-button2 btn" href="{% url "blogs" %}">مطالب بیشتر</a></div>
     </section>
     <section class="bodymain-containerland">
         <div class="main_why">

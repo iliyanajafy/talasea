@@ -34,7 +34,7 @@ class Blog(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     blogid = models.UUIDField(default=uuid.uuid4,primary_key=True,
                               unique=True,editable=False)
-    blog_image = models.ImageField()
+    blog_image = models.ImageField(default="golzaaar.webp")
     day = models.PositiveSmallIntegerField(
         validators=[MinValueValidator(1), MaxValueValidator(30)]
     )

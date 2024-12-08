@@ -75,13 +75,13 @@
             <button class="btn btn-block btn-log">تایید اطلاعات</button>
           </div>
         </div>
+        {% if error %}
+        <div class="alert alert-danger alert-dismissible fade show khata">
+            <strong>خطا!</strong> {{ error }}
+        </div>
+      {% endif %}
       </div>
     </div>
-    {% if error %}
-      <div class="alert alert-danger alert-dismissible fade show khata">
-          <strong>خطا!</strong> {{ error }}
-      </div>
-    {% endif %}
   </form>
   <div class="leftpage">
     <div class="img-container">

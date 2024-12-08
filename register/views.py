@@ -50,13 +50,13 @@ def update(request):
             return render(request, 'login2.html', {'error': "کد ملی باید 11 رقم باشد"})
         if not year.isdigit():
             return render(request, 'login2.html', {'error': "سال تولد باید به صورت عدد باشد"})
-        elif day > 31 or day < 0:
+        elif int(day) > 31 or int(day) < 0:
             return render(request, 'login2.html', {'error': "روز تولد باید بین 1 تا 31 باشد"})
         if not day.isdigit():
             return render(request, 'login2.html', {'error': "روز تولد باید به صورت عدد باشد"})
         if not month.isdigit():
             return render(request, 'login2.html', {'error': "ماه تولد باید به صورت عدد باشد"})
-        elif month > 12 or day < 0:
+        elif int(month) > 12 or int(day) < 0:
             return render(request, 'login2.html', {'error': "روز تولد باید بین 1 تا 12 باشد"})
         Custom_user.objects.create(melicode = melicode , year = year, day = day , month = month , user = request.user )
         return redirect("home")

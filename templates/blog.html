@@ -188,28 +188,26 @@
                   <div class="blog_profileMedia__lNVy_"></div>
                 </div>
               </div>
+              {% if related %}
               <div class="blog_relatedData__VSSTu">
                 <h2>نوشته های مرتبط</h2>
                 <div class="blog_relatedBody__5RKET">
+                  {% for related in related %}
                   <a
                     class="blog_relatedItem__0oEsy"
-                    href="/mag/facts/gold-tooth"
+                    href="{% url "blog" related.blogid %}"
                     ><img
-                      alt="دندان طلا  بررسی مزایا و معایب روکش طلا دندان"
+                      alt="{{related.title}}"
                       loading="lazy"
                       width="210"
                       height="120"
                       decoding="async"
                       data-nimg="1"
                       class="blog_relatedImg__Vttb0"
-                      srcset="
-                        /_next/image?url=https%3A%2F%2Ftalasea.ir%2Fuploads%2F1728226041554_Picture3.png&amp;w=256&amp;q=75 1x,
-                        /_next/image?url=https%3A%2F%2Ftalasea.ir%2Fuploads%2F1728226041554_Picture3.png&amp;w=640&amp;q=75 2x
-                      "
-                      src="/_next/image?url=https%3A%2F%2Ftalasea.ir%2Fuploads%2F1728226041554_Picture3.png&amp;w=640&amp;q=75"
+                      src="{{related.blog_image.url}}"
                       style="color: transparent"
                     />
-                    <h3>دندان طلا بررسی مزایا و معایب روکش طلا دندان</h3>
+                    <h3>{{related.title}}</h3>
                     <ul class="moreItem_moreData__LR8RV">
                       <div class="moreItem_moreDataContent__dF8j_">
                         <li class="moreItem_moreDataItem__pSgI3">
@@ -222,7 +220,7 @@
                             data-nimg="1"
                             src="{% static "img/calender.svg" %}"
                             style="color: transparent"
-                          /><span>۱۵ مهر ۱۴۰۳</span>
+                          /><span>{{related.day}} {{related.month}} {{related.year}}</span>
                         </li>
                       </div>
                       <div class="moreItem_moreDataContent__dF8j_">
@@ -236,158 +234,13 @@
                             data-nimg="1"
                             src="{% static "img/calender.svg" %}"
                             style="color: transparent"
-                          /><span>15 بازدید</span>
-                        </li>
-                      </div>
-                    </ul></a
-                  ><a
-                    class="blog_relatedItem__0oEsy"
-                    href="/mag/facts/meteorite-gold"
-                    ><img
-                      alt="آیا شهاب سنگ طلا دارد؟ شهاب سنگ حاوی چه فلزاتی است؟"
-                      loading="lazy"
-                      width="210"
-                      height="120"
-                      decoding="async"
-                      data-nimg="1"
-                      class="blog_relatedImg__Vttb0"
-                      srcset="
-                        /_next/image?url=https%3A%2F%2Ftalasea.ir%2Fuploads%2F1728225446352_Picture1.png&amp;w=256&amp;q=75 1x,
-                        /_next/image?url=https%3A%2F%2Ftalasea.ir%2Fuploads%2F1728225446352_Picture1.png&amp;w=640&amp;q=75 2x
-                      "
-                      src="/_next/image?url=https%3A%2F%2Ftalasea.ir%2Fuploads%2F1728225446352_Picture1.png&amp;w=640&amp;q=75"
-                      style="color: transparent"
-                    />
-                    <h3>آیا شهاب سنگ طلا دارد؟ شهاب سنگ حاوی چه فلزاتی است؟</h3>
-                    <ul class="moreItem_moreData__LR8RV">
-                      <div class="moreItem_moreDataContent__dF8j_">
-                        <li class="moreItem_moreDataItem__pSgI3">
-                          <img
-                            alt="تاریخ انتشار مقاله"
-                            loading="lazy"
-                            width="11"
-                            height="11"
-                            decoding="async"
-                            data-nimg="1"
-                            src="{% static "img/calender.svg" %}"
-                            style="color: transparent"
-                          /><span>۱۵ مهر ۱۴۰۳</span>
-                        </li>
-                      </div>
-                      <div class="moreItem_moreDataContent__dF8j_">
-                        <li class="moreItem_moreDataItem__pSgI3">
-                          <img
-                            alt="تاریخ انتشار مقاله"
-                            loading="lazy"
-                            width="11"
-                            height="11"
-                            decoding="async"
-                            data-nimg="1"
-                            src="{% static "img/calender.svg" %}"
-                            style="color: transparent"
-                          /><span>8 بازدید</span>
-                        </li>
-                      </div>
-                    </ul></a
-                  ><a
-                    class="blog_relatedItem__0oEsy"
-                    href="/mag/facts/largest-gold-necklace-dubai"
-                    ><img
-                      alt="رکورد بزرگترین گردنبند طلا در دوبی"
-                      loading="lazy"
-                      width="210"
-                      height="120"
-                      decoding="async"
-                      data-nimg="1"
-                      class="blog_relatedImg__Vttb0"
-                      srcset="
-                        /_next/image?url=https%3A%2F%2Ftalasea.ir%2Fuploads%2F1728224594721_Picture1.jpg&amp;w=256&amp;q=75 1x,
-                        /_next/image?url=https%3A%2F%2Ftalasea.ir%2Fuploads%2F1728224594721_Picture1.jpg&amp;w=640&amp;q=75 2x
-                      "
-                      src="/_next/image?url=https%3A%2F%2Ftalasea.ir%2Fuploads%2F1728224594721_Picture1.jpg&amp;w=640&amp;q=75"
-                      style="color: transparent"
-                    />
-                    <h3>رکورد بزرگترین گردنبند طلا در دوبی</h3>
-                    <ul class="moreItem_moreData__LR8RV">
-                      <div class="moreItem_moreDataContent__dF8j_">
-                        <li class="moreItem_moreDataItem__pSgI3">
-                          <img
-                            alt="تاریخ انتشار مقاله"
-                            loading="lazy"
-                            width="11"
-                            height="11"
-                            decoding="async"
-                            data-nimg="1"
-                            src="{% static "img/calender.svg" %}"
-                            style="color: transparent"
-                          /><span>۱۵ مهر ۱۴۰۳</span>
-                        </li>
-                      </div>
-                      <div class="moreItem_moreDataContent__dF8j_">
-                        <li class="moreItem_moreDataItem__pSgI3">
-                          <img
-                            alt="تاریخ انتشار مقاله"
-                            loading="lazy"
-                            width="11"
-                            height="11"
-                            decoding="async"
-                            data-nimg="1"
-                            src="{% static "img/calender.svg" %}"
-                            style="color: transparent"
-                          /><span>14 بازدید</span>
-                        </li>
-                      </div>
-                    </ul></a
-                  ><a
-                    class="blog_relatedItem__0oEsy"
-                    href="/mag/facts/characteristics-professional-gold-dealer"
-                    ><img
-                      alt="فروشنده طلا، ۵ ویژگی یک فروشنده حرفه‌ای طلا و جواهر"
-                      loading="lazy"
-                      width="210"
-                      height="120"
-                      decoding="async"
-                      data-nimg="1"
-                      class="blog_relatedImg__Vttb0"
-                      srcset="
-                        /_next/image?url=https%3A%2F%2Ftalasea.ir%2Fuploads%2F1728215981199_Picture2.png&amp;w=256&amp;q=75 1x,
-                        /_next/image?url=https%3A%2F%2Ftalasea.ir%2Fuploads%2F1728215981199_Picture2.png&amp;w=640&amp;q=75 2x
-                      "
-                      src="/_next/image?url=https%3A%2F%2Ftalasea.ir%2Fuploads%2F1728215981199_Picture2.png&amp;w=640&amp;q=75"
-                      style="color: transparent"
-                    />
-                    <h3>فروشنده طلا، ۵ ویژگی یک فروشنده حرفه‌ای طلا و جواهر</h3>
-                    <ul class="moreItem_moreData__LR8RV">
-                      <div class="moreItem_moreDataContent__dF8j_">
-                        <li class="moreItem_moreDataItem__pSgI3">
-                          <img
-                            alt="تاریخ انتشار مقاله"
-                            loading="lazy"
-                            width="11"
-                            height="11"
-                            decoding="async"
-                            data-nimg="1"
-                            src="{% static "img/calender.svg" %}"
-                            style="color: transparent"
-                          /><span>۱۵ مهر ۱۴۰۳</span>
-                        </li>
-                      </div>
-                      <div class="moreItem_moreDataContent__dF8j_">
-                        <li class="moreItem_moreDataItem__pSgI3">
-                          <img
-                            alt="تاریخ انتشار مقاله"
-                            loading="lazy"
-                            width="11"
-                            height="11"
-                            decoding="async"
-                            data-nimg="1"
-                            src="{% static "img/calender.svg" %}"
-                            style="color: transparent"
-                          /><span>11 بازدید</span>
+                          /><span>{{related.view_count}}</span>
                         </li>
                       </div>
                     </ul></a
                   >
+                  {% endfor %}
+                  {% endif %}
                 </div>
               </div>
               <form method="POST">
