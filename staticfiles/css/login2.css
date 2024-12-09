@@ -1,0 +1,102 @@
+.form {
+  padding: 2rem 3rem 1.5rem 3rem;
+  width: 66.666667%;
+}
+.dis-new {
+  font-size: 0.875rem;
+  line-height: 1.4;
+  font-weight: 400;
+  margin-bottom: 0.75rem;
+  margin-top: 20px;
+}
+.dis-new ::before {
+  content: "";
+  background-color: rgb(252 213 53 / 1);
+  rotate: 45deg;
+  width: 0.625rem;
+  height: 0.625rem;
+}
+.input-context {
+  background-color: white !important;
+}
+.text-new {
+  font-size: 1rem;
+  line-height: 1.4;
+  font-weight: 400;
+  padding-right: 0.75rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.75rem;
+}
+.input-form {
+  align-items: normal;
+}
+.input-container {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.form {
+  height: auto;
+}
+.three-container {
+  width: 100%;
+  display: flex;
+}
+.oneofthree {
+  padding-left: 0.25rem;
+  flex-direction: column;
+  display: flex;
+  width: 33.333333%;
+}
+.marginwanted {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+.intheone {
+  width: 100%;
+  height: 48px;
+  position: relative;
+  border: 0.8px solid #dfdfdf;
+  border-radius: 10px;
+  transition: all 0.4s;
+  margin: 10px 0;
+}
+.inone {
+  position: absolute;
+  top: 0;
+  right: 16px;
+  padding: 3px 4px 3px 16px;
+  background-color: transparent;
+  transform: translateY(-50%);
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: #000;
+  z-index: 2;
+  --tw-bg-opacity: 1;
+  background-color: rgb(255 255 255 / var(--tw-bg-opacity));
+}
+.inacc {
+  width: 100%;
+  height: 100%;
+  padding: 2px 12px;
+  position: relative;
+}
+.inacc input {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  color: #000;
+  font-size: 1.1rem;
+  font-weight: 400;
+  transition: all 0.4s;
+  border: none;
+  outline: none;
+  text-align: center;
+}
+.khata {
+  width: 100%;
+  margin-top: 10px;
+  font-size: 15px;
+}
+.form {
+  height: auto;
+}

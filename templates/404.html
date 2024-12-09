@@ -1,0 +1,20 @@
+{% extends "base.html" %} {% block content %} {% load static %}
+<section>
+  <div class="a404_container">
+    <div class="a404mid">
+      <div class="a404in">
+        <img alt="خطا" loading="lazy" width="260" height="258" decoding="async"
+        data-nimg="1" src="{% static "img/wth.webp" %}" style="color:
+        transparent" />
+        <div class="a404gray"></div>
+      </div>
+      <h1 class="a404title">صفحه‌ای که دنبالش بودید پیدا نشد</h1>
+      <p class="a404text">
+        به صفحه اصلی بازگردید یا از منوی سایت برای یافتن محتوای دیگر استفاده
+        کنید.
+      </p>
+      <a class="a404a" href="/">بازگشت به صفحه اصلی</a>
+    </div>
+  </div>
+</section>
+{% endblock content %}

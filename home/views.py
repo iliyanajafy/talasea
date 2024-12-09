@@ -9,3 +9,7 @@ def home(request):
    items = Shop.objects.all()
    best_blogs = Blog.objects.order_by("-created")[:6]
    return render(request,"home.html",{"best_blogs":best_blogs,"items":items})
+
+
+def page404(request):
+   return render(request, '404.html', status=404)
