@@ -5,6 +5,7 @@ import markdown # type: ignore
 from .forms import Review
 import json
 from django.db.models import Avg
+from django.core.paginator import Paginator
 
 # Query to get the blog with the highest average rating
 
@@ -56,8 +57,62 @@ def blog(request,pk):
         rating_av = 0
         rating_av2 = 0
     related_blogs = Blog.objects.filter(subject=blog.subject).exclude(title=blog.title)[:4]
-    return render(request,"blog.html",{"context":blog,"reviews" : reviews,"form": form,"many":howmany,"rating": rating_av,"rating2":rating_av2,"count_rating":ratings_count,"related": related_blogs})
+    subject_url = f"{blog.subject}"
+    return render(request,"blog.html",{"context":blog,"reviews" : reviews,"form": form,"many":howmany,"rating": rating_av,"rating2":rating_av2,"count_rating":ratings_count,"related": related_blogs,"sub":subject_url})
 
 
 def trade_gold(request):
-    blog = Blog.objects.filter(subject="آموزش خرید و فروش طلا")
+    latest = Blog.objects.filter(subject="آموزش خرید و فروش طلا").order_by("-created")
+    best_rated = Blog.objects.filter(subject="آموزش خرید و فروش طلا").annotate(average_rating=Avg('ratings__rating')).order_by('-average_rating').first()
+    best_rateds = Blog.objects.filter(subject="آموزش خرید و فروش طلا").annotate(average_rating=Avg('ratings__rating')).order_by('-average_rating')[1:9]
+    p = Paginator(latest,11)
+    page = request.GET.get("page")
+    items = p.get_page(page)
+
+    
+
+    return render(request,"sell.html",{"latest" : items,"best_rated":best_rated,"best_rateds":best_rateds})
+
+
+
+def profit(request):
+    latest = Blog.objects.filter(subject="سرمایه گذاری با طلا").order_by("-created")
+    best_rated = Blog.objects.filter(subject="سرمایه گذاری با طلا").annotate(average_rating=Avg('ratings__rating')).order_by('-average_rating').first()
+    best_rateds = Blog.objects.filter(subject="سرمایه گذاری با طلا").annotate(average_rating=Avg('ratings__rating')).order_by('-average_rating')[1:9]
+    p = Paginator(latest, 11)
+    page = request.GET.get("page")
+    items = p.get_page(page)
+
+    return render(request, "profit.html", {"latest": items, "best_rated": best_rated, "best_rateds": best_rateds})
+
+def bzar(request):
+    latest = Blog.objects.filter(subject="بورس و بازار جهانی").order_by("-created")
+    best_rated = Blog.objects.filter(subject="بورس و بازار جهانی").annotate(average_rating=Avg('ratings__rating')).order_by('-average_rating').first()
+    best_rateds = Blog.objects.filter(subject="بورس و بازار جهانی").annotate(average_rating=Avg('ratings__rating')).order_by('-average_rating')[1:9]
+    p = Paginator(latest, 11)
+    page = request.GET.get("page")
+    items = p.get_page(page)
+
+    return render(request, "bzar.html", {"latest": items, "best_rated": best_rated, "best_rateds": best_rateds})
+
+
+def know(request):
+    latest = Blog.objects.filter(subject="دانستنی طلا").order_by("-created")
+    best_rated = Blog.objects.filter(subject="دانستنی طلا").annotate(average_rating=Avg('ratings__rating')).order_by('-average_rating').first()
+    best_rateds = Blog.objects.filter(subject="دانستنی طلا").annotate(average_rating=Avg('ratings__rating')).order_by('-average_rating')[1:9]
+    p = Paginator(latest, 11)
+    page = request.GET.get("page")
+    items = p.get_page(page)
+
+    return render(request, "know.html", {"latest": items, "best_rated": best_rated, "best_rateds": best_rateds})
+
+
+def coin(request):
+    latest = Blog.objects.filter(subject="سکه طلا").order_by("-created")
+    best_rated = Blog.objects.filter(subject="سکه طلا").annotate(average_rating=Avg('ratings__rating')).order_by('-average_rating').first()
+    best_rateds = Blog.objects.filter(subject="سکه طلا").annotate(average_rating=Avg('ratings__rating')).order_by('-average_rating')[1:9]
+    p = Paginator(latest, 11)
+    page = request.GET.get("page")
+    items = p.get_page(page)
+
+    return render(request, "coin.html", {"latest": items, "best_rated": best_rated, "best_rateds": best_rateds})

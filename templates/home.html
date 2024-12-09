@@ -356,102 +356,20 @@
     <section class="mid-purchase">
         <h3 class="page-title-purchase">شمش های طلا</h3>
         <div class="main-item-purchase row">
-            <div class="main-item col-6 col-sm-4 col-md-3">
-                <div class="main_itemImg__ktn7Q">
-                    <img alt="پارسیان 30 سوتی" loading="lazy" decoding="async" data-nimg="1" style="color:transparent" src="media/img/150.webp" class="img-fluid">
+            {% for item in items %}
+                <div class="main-item col-6 col-sm-4 col-md-3">
+                    <div class="main_itemImg__ktn7Q">
+                        <img alt="پارسیان 30 سوتی" loading="lazy" decoding="async" data-nimg="1" style="color:transparent" src="{{item.image.url}}" class="img-fluid">
+                    </div>
+                    <div class="main_itemTexts">
+                        <span>{{item.name}}</span>
+                        <span>{{item.price}}<!-- --> تومان</span>
+                    </div>
+                    <div class="main_button d-grid">
+                        <button class="gold-button-purchase btn btn-block">خرید</button>
+                    </div>
                 </div>
-                <div class="main_itemTexts">
-                    <span>پارسیان 30 سوتی</span>
-                    <span>126,323<!-- --> تومان</span>
-                </div>
-                <div class="main_button d-grid">
-                    <button class="gold-button-purchase btn btn-block">خرید</button>
-                </div>
-            </div>
-            <div class="main-item col-6 col-sm-4 col-md-3">
-                <div class="main_itemImg__ktn7Q">
-                    <img alt="پارسیان 30 سوتی" loading="lazy" decoding="async" data-nimg="1" style="color:transparent" src="media/img/150.webp" class="img-fluid">
-                </div>
-                <div class="main_itemTexts">
-                    <span>پارسیان 30 سوتی</span>
-                    <span>126,323<!-- --> تومان</span>
-                </div>
-                <div class="main_button d-grid">
-                    <button class="gold-button-purchase btn btn-block">خرید</button>
-                </div>
-            </div>
-            <div class="main-item col-6 col-sm-4 col-md-3">
-                <div class="main_itemImg__ktn7Q">
-                    <img alt="پارسیان 30 سوتی" loading="lazy" decoding="async" data-nimg="1" style="color:transparent" src="media/img/150.webp" class="img-fluid">
-                </div>
-                <div class="main_itemTexts">
-                    <span>پارسیان 30 سوتی</span>
-                    <span>126,323<!-- --> تومان</span>
-                </div>
-                <div class="main_button d-grid">
-                    <button class="gold-button-purchase btn btn-block">خرید</button>
-                </div>
-            </div>
-            <div class="main-item col-6 col-sm-4 col-md-3">
-                <div class="main_itemImg__ktn7Q">
-                    <img alt="پارسیان 30 سوتی" loading="lazy" decoding="async" data-nimg="1" style="color:transparent" src="media/img/1gz.webp" class="img-fluid">
-                </div>
-                <div class="main_itemTexts">
-                    <span>پارسیان 30 سوتی</span>
-                    <span>126,323<!-- --> تومان</span>
-                </div>
-                <div class="main_button d-grid">
-                    <button class="gold-button-purchase btn btn-block">خرید</button>
-                </div>
-            </div>
-            <div class="main-item col-6 col-sm-4 col-md-3">
-                <div class="main_itemImg__ktn7Q">
-                    <img alt="پارسیان 30 سوتی" loading="lazy" decoding="async" data-nimg="1" style="color:transparent" src="media/img/1gz24.webp" class="img-fluid">
-                </div>
-                <div class="main_itemTexts">
-                    <span>پارسیان 30 سوتی</span>
-                    <span>126,323<!-- --> تومان</span>
-                </div>
-                <div class="main_button d-grid">
-                    <button class="gold-button-purchase btn btn-block">خرید</button>
-                </div>
-            </div>
-            <div class="main-item col-6 col-sm-4 col-md-3">
-                <div class="main_itemImg__ktn7Q">
-                    <img alt="پارسیان 30 سوتی" loading="lazy" decoding="async" data-nimg="1" style="color:transparent" src="media/img/2_5gz.webp" class="img-fluid">
-                </div>
-                <div class="main_itemTexts">
-                    <span>پارسیان 30 سوتی</span>
-                    <span>126,323<!-- --> تومان</span>
-                </div>
-                <div class="main_button d-grid">
-                    <button class="gold-button-purchase btn btn-block">خرید</button>
-                </div>
-            </div>
-            <div class="main-item col-6 col-sm-4 col-md-3">
-                <div class="main_itemImg__ktn7Q">
-                    <img alt="پارسیان 30 سوتی" loading="lazy" decoding="async" data-nimg="1" style="color:transparent" src="media/img/5gz.webp" class="img-fluid">
-                </div>
-                <div class="main_itemTexts">
-                    <span>پارسیان 30 سوتی</span>
-                    <span>126,323<!-- --> تومان</span>
-                </div>
-                <div class="main_button d-grid">
-                    <button class="gold-button-purchase btn btn-block">خرید</button>
-                </div>
-            </div>
-            <div class="main-item col-6 col-sm-4 col-md-3">
-                <div class="main_itemImg__ktn7Q">
-                    <img alt="پارسیان 30 سوتی" loading="lazy" decoding="async" data-nimg="1" style="color:transparent" src="media/img/20gz24.webp" class="img-fluid">
-                </div>
-                <div class="main_itemTexts">
-                    <span>پارسیان 30 سوتی</span>
-                    <span>126,323<!-- --> تومان</span>
-                </div>
-                <div class="main_button d-grid">
-                    <button class="gold-button-purchase btn btn-block">خرید</button>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </section>
     <section class="main-giftcard">

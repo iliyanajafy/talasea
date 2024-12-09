@@ -11,19 +11,25 @@
         class="logo-sm" />
       </a>
       <div class="nav-navitem">
-        <a href="about-us.html" class="nav-item">
-          <span>درباره طلاسی</span>
+        <a href="{% url 'blogs' %}" class="nav-item">
+          <span>خانه</span>
+      </a>
+        <a href="{% url 'آموزش خرید و فروش طلا' %}" class="nav-item">
+            <span>آموزش خرید و فروش طلا</span>
         </a>
-        <a href="rules.html" class="nav-item">
-          <span>قوانین و مقررات</span>
+        <a href="{% url 'سرمایه گذاری با طلا' %}" class="nav-item">
+            <span>سرمایه گذاری با طلا</span>
         </a>
-        <a href="question.html" class="nav-item">
-          <span>سوالات متداول</span>
+        <a href="{% url 'بورس و بازار جهانی' %}" class="nav-item">
+            <span>بورس و بازار جهانی</span>
         </a>
-        <a href="" class="nav-item">
-          <span>بلاگ طلاسی</span>
+        <a href="{% url 'دانستنی طلا' %}" class="nav-item">
+            <span>دانستی طلا</span>
         </a>
-      </div>
+        <a href="{% url 'سکه طلا' %}" class="nav-item">
+            <span>سکه طلا</span>
+        </a>
+    </div>    
     </div>
     <div class="nav-left">
       <img src="{% static "img/Screenshot 2024-08-19 110423.png" %}" alt=""
